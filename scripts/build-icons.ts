@@ -55,26 +55,10 @@ async function cleanupGeneratedFiles(componentsDir: string) {
 }
 
 /**
- * Convert filename to PascalCase component name
- * Handles files already named with Icon prefix (e.g., IconX.svg → IconX)
- * and files without prefix (e.g., arrow.svg → IconArrow)
+ * Get component name from filename (just removes extension)
  */
 function toComponentName(filename: string): string {
-  const name = basename(filename, extname(filename));
-
-  // If the filename already starts with "Icon", use it as-is but ensure proper casing
-  if (name.startsWith('Icon')) {
-    // Already has Icon prefix, just ensure first letter is uppercase
-    return name.charAt(0).toUpperCase() + name.slice(1);
-  }
-
-  // Convert kebab-case, snake_case, or space-separated to PascalCase
-  const pascalName = name
-    .split(/[-_\s]+/)
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join('');
-
-  return 'Icon' + pascalName;
+  return basename(filename, extname(filename));
 }
 
 /**

@@ -1,28 +1,48 @@
-# Icons repo
+# @pierre/icons
 
-### Goal
-Single source of truth for icon SVGs and React components
+SVG icons → React components.
 
-### Why
-- Duplicate icon processing scripts
-- Outdated icons in different projects
-- No clear way to upgrade icons if you’re not me
-- No way to preserve customizations in the React components
+## Setup
 
-### Solution
-- Make a new pierrecomputer/icons repo
-- Check in all SVGs so everyone has them (right now they’re ignored by git in all projects)
-- Single set of scripts for processing icons into optimized SVGs and React components
-- npm package for importing, versioning, updating, etc
+```bash
+npm i
+```
 
-### Figma tangent
-Two-part tangent: cleaning up the Icons page in our DS file (in progress), and better supporting the export flow for less work on my end.
+## Adding Icons
 
-- I want to create a custom Figma plugin for configuring SVG exports.
-- This would take named layers and apply them as `class`  props on specific paths in the exported SVG.
-- Class values would be retained in the React conversion process.
+1. Drop SVG files into `svg/`
+2. Run `npm run icons`
+3. Import from `@pierre/icons`
 
-### Questions
-- Open or closed source?
-- How consistent can we expect to be on say linters, formatting, etc?
-- What level of customization do we want? For example, custom prop values in like dimensions or something?
+```tsx
+import { IconArrow, IconCheck } from '@pierre/icons';
+
+<IconArrow size={20} color="red" />;
+```
+
+## Scripts
+
+| Command                 | Description                                 |
+| ----------------------- | ------------------------------------------- |
+| `npm run icons`         | Build components, sprite, and preview       |
+| `npm run icons:build`   | Generate React components from SVGs         |
+| `npm run icons:sprite`  | Generate SVG sprite                         |
+| `npm run icons:preview` | Generate HTML preview                       |
+| `npm run build`         | Full build (icons, TypeScript, and preview) |
+| `npm run lint`          | Run ESLint                                  |
+| `npm run format`        | Run Prettier                                |
+
+## Icon Props
+
+```tsx
+interface IconProps {
+  size?: number | string; // default: 16
+  color?: string; // default: 'currentcolor'
+  style?: CSSProperties;
+  className?: string;
+}
+```
+
+## Preview
+
+After building, open `dist/index.html` in a browser to browse all icons.
