@@ -1,0 +1,2 @@
+# Place your SVG icon files in this directory.
+# Then run `bun run icons:build` to generate React components.
