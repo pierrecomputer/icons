@@ -4,9 +4,6 @@ node_modules/
 # Build output
 dist/
 
-# Generated icon components (re-generated from SVGs)
-src/icons/*.tsx
-
 # Logs
 *.log
 

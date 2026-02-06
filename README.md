@@ -14,8 +14,9 @@ npm i
 ## Adding icons
 
 1. Drop SVG files into `svg/`
-2. Run `npm run icons`
-3. Import from `@pierre/icons`
+2. Run `npm run icons:build`
+3. Commit the generated `src/icons/*.tsx` files
+4. Import from `@pierre/icons`
 
 ```tsx
 import { IconArrow, IconCheck } from '@pierre/icons';
@@ -31,7 +32,8 @@ import { IconArrow, IconCheck } from '@pierre/icons';
 | `npm run icons:build`   | Generate React components from SVGs         |
 | `npm run icons:sprite`  | Generate SVG sprite                         |
 | `npm run icons:preview` | Generate HTML preview                       |
-| `npm run build`         | Full build (icons, TypeScript, and preview) |
+| `npm run build`         | Clean dist, generate components, compile TS |
+| `npm run clean`         | Remove dist folder                          |
 | `npm run lint`          | Run ESLint                                  |
 | `npm run format`        | Run Prettier                                |
 
