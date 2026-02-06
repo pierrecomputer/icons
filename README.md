@@ -2,10 +2,8 @@
 
 `@pierre/icons` is an open source icon library designed first and foremost for
 [Diffs.com](https://diffs.com/) by
-[The Pierre Computer Company](https://pierre.computer). Available as vanilla
-JavaScript and React components.
-
-SVG icons → React components.
+[The Pierre Computer Company](https://pierre.computer). Available as source SVGs
+exported from Figma and as compiled React components.
 
 ## Setup
 
@@ -13,7 +11,7 @@ SVG icons → React components.
 npm i
 ```
 
-## Adding Icons
+## Adding icons
 
 1. Drop SVG files into `svg/`
 2. Run `npm run icons`
@@ -37,7 +35,7 @@ import { IconArrow, IconCheck } from '@pierre/icons';
 | `npm run lint`          | Run ESLint                                  |
 | `npm run format`        | Run Prettier                                |
 
-## Icon Props
+## Icon props
 
 ```tsx
 interface IconProps {
