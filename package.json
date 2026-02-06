@@ -1,9 +1,9 @@
 {
   "name": "@pierre/icons",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
-  "description": "Pierre icon library - SVG to React component generation",
+  "description": "The Pierre Computer Company Icon Library",
+  "license": "apache-2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,7 +20,9 @@
   "sideEffects": false,
   "files": [
     "dist",
-    "svg"
+    "svg",
+    "LICENSE.md",
+    "README.md"
   ],
   "scripts": {
     "build": "npm run icons:build && npm run tsc",
@@ -65,6 +67,5 @@
     "svg",
     "components",
     "pierre"
-  ],
-  "license": "MIT"
+  ]
 }
