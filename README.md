@@ -1,5 +1,10 @@
 # @pierre/icons
 
+`@pierre/icons` is an open source icon library designed first and foremost for
+[Diffs.com](https://diffs.com/) by
+[The Pierre Computer Company](https://pierre.computer). Available as vanilla
+JavaScript and React components.
+
 SVG icons → React components.
 
 ## Setup
