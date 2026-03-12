@@ -133,6 +133,7 @@ export { IconDraft } from './IconDraft';
 export { IconDragonball } from './IconDragonball';
 export { IconDragonballFill } from './IconDragonballFill';
 export { IconEllipsis } from './IconEllipsis';
+export { IconEllipsisSm } from './IconEllipsisSm';
 export { IconEmojiSmile } from './IconEmojiSmile';
 export { IconEmojiSmileDashed } from './IconEmojiSmileDashed';
 export { IconEmojiSmileFill } from './IconEmojiSmileFill';

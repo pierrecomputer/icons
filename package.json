@@ -5,7 +5,6 @@
   "description": "The Pierre Computer Company Icon Library",
   "license": "apache-2.0",
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
@@ -17,7 +16,6 @@
       "import": "./dist/types.js"
     }
   },
-  "sideEffects": false,
   "files": [
     "dist",
     "svg",
@@ -37,9 +35,6 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepublishOnly": "npm run build"
-  },
-  "dependencies": {
-    "react": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@babel/types": "^7.28.6",
