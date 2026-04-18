@@ -16,6 +16,3 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
-
-# Package manager lock files (using npm)
-package-lock.json
