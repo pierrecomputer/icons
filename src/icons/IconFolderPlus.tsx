@@ -9,5 +9,5 @@ export function IconFolderPlus({
 }: IconProps) {
   const height = size;
   const width = size === "1em" ? "1em" : Number(size) * 1;
-  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><g opacity={0.4}><path d="M14 7.416A5 5 0 0 0 7.417 14H2a2 2 0 0 1-2-2V6h14zM4.585 2a2 2 0 0 1 1.028.285l1.788 1.072a1 1 0 0 0 .514.143H12c.932 0 1.712.638 1.935 1.5H0V4a2 2 0 0 1 2-2z" /></g><path fillRule="evenodd" d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8m0 1.5a.5.5 0 0 0-.5.5v1.5H10a.5.5 0 0 0 0 1h1.5V14a.5.5 0 0 0 1 0v-1.5H14a.5.5 0 0 0 0-1h-1.5V10a.5.5 0 0 0-.5-.5" clipRule="evenodd" /></svg>;
+  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><path d="M14 7.416A5 5 0 0 0 7.417 14H2a2 2 0 0 1-2-2V6h14zM4.585 2a2 2 0 0 1 1.028.285l1.788 1.072a1 1 0 0 0 .514.143H12c.932 0 1.712.638 1.935 1.5H0V4a2 2 0 0 1 2-2z" opacity={0.4} /><path fillRule="evenodd" d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8m0 1.5a.5.5 0 0 0-.5.5v1.5H10a.5.5 0 0 0 0 1h1.5V14a.5.5 0 0 0 1 0v-1.5H14a.5.5 0 0 0 0-1h-1.5V10a.5.5 0 0 0-.5-.5" clipRule="evenodd" /></svg>;
 }
