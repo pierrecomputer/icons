@@ -9,5 +9,5 @@ export function IconExpand({
 }: IconProps) {
   const height = size;
   const width = size === "1em" ? "1em" : Number(size) * 1;
-  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><path d="M11.147 6.646a.5.5 0 1 1 .707.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L8 9.793z" /></svg>;
+  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><path d="M3.47 5.47a.75.75 0 0 1 1.06 0L8 8.94l3.47-3.47a.75.75 0 1 1 1.06 1.06l-4 4a.75.75 0 0 1-1.06 0l-4-4a.75.75 0 0 1 0-1.06" /></svg>;
 }
