@@ -1,15 +1,17 @@
-PIERRE COMPUTER COMPANY █
-PROJECT: ICONS
+PIERRE COMPUTER COMPANY █ PROJECT: ICONS
 
-~~~
+```
 
 CONTACT: SUPPORT@PIERRE.CO
 LOCATION: USA
 STATUS: ONLINE
 OPEN POSITIONS: [Systems Engineer](https://pierre.computer/careers/systems-engineer)
 
-~~~
+```
 
-OVERVIEW: 
- - Built for [Diffs.com](https://diffs.com)
- - Available as source SVGs exported from Figma and as compiled React components.
+OVERVIEW:
+
+- Built for [Diffs.com](https://diffs.com),
+  [Trees.software](https://trees.software), and
+  [DiffsHub.com](https://diffshub.com).
+- Available as source SVGs exported from Figma and as compiled React components.
