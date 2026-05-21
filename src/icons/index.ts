@@ -337,6 +337,7 @@ export { IconTrash } from './IconTrash';
 export { IconTriangle } from './IconTriangle';
 export { IconTriangleFill } from './IconTriangleFill';
 export { IconType } from './IconType';
+export { IconTypeWord } from './IconTypeWord';
 export { IconUnlink } from './IconUnlink';
 export { IconVariable } from './IconVariable';
 export { IconWaiting } from './IconWaiting';
