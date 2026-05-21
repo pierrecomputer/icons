@@ -1,9 +1,18 @@
 {
   "name": "@pierre/icons",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "type": "module",
   "description": "The Pierre Computer Company Icon Library",
-  "license": "apache-2.0",
+  "license": "Apache-2.0",
+  "author": "Pierre Computer Company <support@pierre.co>",
+  "homepage": "https://github.com/pierrecomputer/icons#readme",
+  "bugs": {
+    "url": "https://github.com/pierrecomputer/icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierrecomputer/icons.git"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -19,8 +28,8 @@
   "files": [
     "dist",
     "svg",
-    "LICENSE.md",
-    "README.md"
+    "LICENSE",
+    "README"
   ],
   "scripts": {
     "build": "npm run clean && npm run icons:build && npm run tsc",
