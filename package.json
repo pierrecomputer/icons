@@ -1,6 +1,6 @@
 {
   "name": "@pierre/icons",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "type": "module",
   "description": "The Pierre Computer Company Icon Library",
   "license": "Apache-2.0",
@@ -25,12 +25,16 @@
       "import": "./dist/types.js"
     }
   },
+  "sideEffects": false,
   "files": [
     "dist",
     "svg",
     "LICENSE",
     "README"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "npm run clean && npm run icons:build && npm run tsc",
     "icons:build": "npx tsx scripts/build-icons.ts",
