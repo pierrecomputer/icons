@@ -9,5 +9,5 @@ export function IconReplace({
 }: IconProps) {
   const height = size;
   const width = size === "1em" ? "1em" : Number(size) * 1;
-  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><path fillRule="evenodd" d="M5.28 4.72a.75.75 0 0 1 0 1.06L3.56 7.5h8.19a1.75 1.75 0 0 0 1.75-1.75v-4a.75.75 0 0 1 1.5 0v4A3.25 3.25 0 0 1 11.75 9H3.56l1.72 1.72a.75.75 0 1 1-1.06 1.06l-3-3a.75.75 0 0 1 0-1.06l3-3a.75.75 0 0 1 1.06 0" clipRule="evenodd" /></svg>;
+  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><path fillRule="evenodd" d="M5.28 5.72a.75.75 0 0 1 0 1.06L3.56 8.5h8.19a1.75 1.75 0 0 0 1.75-1.75v-4a.75.75 0 0 1 1.5 0v4A3.25 3.25 0 0 1 11.75 10H3.56l1.72 1.72a.75.75 0 1 1-1.06 1.06l-3-3a.75.75 0 0 1 0-1.06l3-3a.75.75 0 0 1 1.06 0" clipRule="evenodd" /></svg>;
 }
