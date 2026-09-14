@@ -183,6 +183,7 @@ export { IconFunctionFill } from './IconFunctionFill';
 export { IconGear } from './IconGear';
 export { IconGearFill } from './IconGearFill';
 export { IconGlobe } from './IconGlobe';
+export { IconGlobeLines } from './IconGlobeLines';
 export { IconHash } from './IconHash';
 export { IconHeart } from './IconHeart';
 export { IconHeartFill } from './IconHeartFill';
