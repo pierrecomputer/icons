@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family:
+    ui-sans-serif,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.pi {
+  display: block;
+}
+
+/* Layout ------------------------------------------------------------- */
+
+.app {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0 16px;
+  margin-bottom: 32px;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.header p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--color-fg2);
+}
+
+/* Wide enough for the longest theme name without clipping. */
+.header .field {
+  flex: none;
+  min-width: 232px;
+}
+
+.section {
+  margin-bottom: 56px;
+}
+
+.section > h2 {
+  margin: 0 0 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.section > p {
+  margin: 0 0 20px;
+  font-size: 13px;
+  color: var(--color-fg2);
+  max-width: 68ch;
+}
+
+/* Controls ----------------------------------------------------------- */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: var(--color-bg-sunken);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 132px;
+}
+
+.field > span {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-fg3);
+}
+
+select,
+input[type='text'],
+input[type='search'] {
+  height: 32px;
+  padding: 0 8px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--color-fg);
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+}
+
+input[type='search'] {
+  width: 100%;
+  max-width: 320px;
+}
+
+select:focus-visible,
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--ui-theme-primary-icon);
+  outline-offset: 1px;
+}
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  align-self: end;
+  height: 32px;
+  min-width: 0;
+}
+
+.checkbox > span {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--color-fg1);
+}
+
+button {
+  height: 32px;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--color-fg);
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--color-fg3);
+}
+
+/* Usage examples ----------------------------------------------------- */
+
+.usage {
+  padding: 8px;
+  margin: 0;
+  list-style: none;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-bg-raised);
+}
+
+.usage li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.usage li:hover {
+  background: var(--color-bg-sunken);
+}
+
+.usage-path {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  color: var(--color-fg1);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.usage code {
+  flex: none;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  color: var(--color-fg1);
+  white-space: nowrap;
+}
+
+.section > p code {
+  padding: 1px 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  background: var(--color-bg-sunken);
+  border-radius: 4px;
+}
+
+/* Stage -------------------------------------------------------------- */
+
+.stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  padding: 40px 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background-color: var(--color-bg-sunken);
+  background-image:
+    linear-gradient(45deg, var(--checker) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--checker) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--checker) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--checker) 75%);
+  background-size: 16px 16px;
+  background-position:
+    0 0,
+    0 8px,
+    8px -8px,
+    -8px 0;
+}
+
+.stage figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.stage figcaption {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-fg2);
+}
+
+/* Comparison --------------------------------------------------------- */
+
+.compare {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 12px;
+}
+
+.compare-cell {
+  padding: 16px 12px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-bg-raised);
+}
+
+.compare-pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.compare-pair > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.compare-pair small {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-fg3);
+}
+
+.compare-cell > code {
+  font-size: 11px;
+  color: var(--color-fg2);
+}
+
+/* Icon grid ---------------------------------------------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 8px;
+}
+
+.grid button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  padding: 16px 8px;
+  overflow: hidden;
+  border-color: transparent;
+}
+
+.grid button:hover {
+  background: var(--color-bg-sunken);
+  border-color: var(--color-border);
+}
+
+.grid button > span {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 10px;
+  color: var(--color-fg2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empty {
+  padding: 32px 0;
+  color: var(--color-fg3);
+}
