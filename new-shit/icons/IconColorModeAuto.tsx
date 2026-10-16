@@ -18,30 +18,14 @@ export interface IconColorModeAutoProps
 
 const variants = {
   'outline-16px': {
-    viewBox: '0 0 16 19',
-    ratio: 0.8421052631578947,
-    body: (
-      <>
-        <path
-          d="M14.75 8A6.75 6.75 0 1 0 8 14.75V16A8 8 0 1 1 8 0a8 8 0 0 1 0 16v-1.25A6.75 6.75 0 0 0 14.75 8"
-          fill="currentColor"
-        />
-        <path d="M16 18.25H8v-16h8z" className="subtract" fill="currentColor" />
-      </>
-    ),
+    viewBox: '0 0 16 16',
+    ratio: 1,
+    body: <path d="M8 16H0V0h8z" className="union" fill="currentColor" />,
   },
   'outline-24px': {
-    viewBox: '0 0 24 27',
-    ratio: 0.8888888888888888,
-    body: (
-      <>
-        <path
-          d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10v2C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12v-2c5.523 0 10-4.477 10-10"
-          fill="currentColor"
-        />
-        <path d="M24 27H12V3h12z" className="subtract" fill="currentColor" />
-      </>
-    ),
+    viewBox: '0 0 24 24',
+    ratio: 1,
+    body: <path d="M12 24H0V0h12z" className="union" fill="currentColor" />,
   },
 };
 
