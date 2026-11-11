@@ -15,3 +15,18 @@ OVERVIEW:
   [Trees.software](https://trees.software), and
   [DiffsHub.com](https://diffshub.com).
 - Available as source SVGs exported from Figma and as compiled React components.
+
+INSTALL:
+
+```bash
+npm install @pierre/icons@beta
+```
+
+USAGE:
+
+The stable and v2 beta collections can be imported together during the beta:
+
+```tsx
+import { IconCheck as StableIconCheck } from '@pierre/icons';
+import { IconCheck as BetaIconCheck } from '@pierre/icons/beta';
+```

@@ -11,6 +11,7 @@ export default [
       '**/build/**',
       // Generated icon files
       'src/icons/*.tsx',
+      'src/beta/*.tsx',
     ],
   },
   js.configs.recommended,

@@ -9,5 +9,5 @@ export function IconSymbolExtractedDuo({
 }: IconProps) {
   const height = size;
   const width = size === "1em" ? "1em" : Number(size) * 1;
-  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><path fillRule="evenodd" d="M8 0c6.588 0 8 1.412 8 8s-1.412 8-8 8-8-1.412-8-8 1.412-8 8-8" clipRule="evenodd" opacity={0.2} /><path d="M8.25 4.25a.75.75 0 0 1 0 1.5H6.81l3.302 3.302a1.5 1.5 0 1 1-1.06 1.06L5.75 6.811V8.25a.75.75 0 0 1-1.5 0V5A.75.75 0 0 1 5 4.25z" /></svg>;
+  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><path fillRule="evenodd" d="M8 0c6.588 0 8 1.412 8 8s-1.412 8-8 8-8-1.412-8-8 1.412-8 8-8" className="bg" clipRule="evenodd" opacity={0.2} /><path d="M8.25 4.25a.75.75 0 0 1 0 1.5H6.81l3.302 3.302a1.5 1.5 0 1 1-1.06 1.06L5.75 6.811V8.25a.75.75 0 0 1-1.5 0V5A.75.75 0 0 1 5 4.25z" className="fg" /></svg>;
 }

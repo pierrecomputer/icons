@@ -1,11 +1,24 @@
 #!/usr/bin/env node
 import { transform } from '@svgr/core';
 import { mkdir, readFile, readdir, rm, stat, writeFile } from 'fs/promises';
-import { basename, dirname, extname, join } from 'path';
-import { fileURLToPath } from 'url';
+import { basename, dirname, extname, join, resolve } from 'path';
+import { format } from 'prettier';
+import { fileURLToPath, pathToFileURL } from 'url';
 
+import {
+  type IconLayerContext,
+  type IconManifest,
+  type ManifestIcon,
+  type ReactVariant,
+  addIconLayerClasses,
+  generateReactIcon,
+  generateReactIndex,
+  iconLayerStyle,
+  manifestVariantKey,
+} from '../../figma/packages/svg-pipeline/src/index.ts';
 import { SVGOConfig } from '../svgo.config.js';
 
+import { svgToJsx } from './svg-to-jsx.js';
 import template from './svgr-template.js';
 
 const colors = {
@@ -61,6 +74,20 @@ function toComponentName(filename: string): string {
   return basename(filename, extname(filename));
 }
 
+function flatLayerContext(componentName: string): IconLayerContext {
+  const style = componentName.endsWith('Duo')
+    ? 'duo'
+    : componentName.endsWith('Fill')
+      ? 'fill'
+      : 'outline';
+  const baseName = componentName.replace(/(?:Duo|Fill)$/, '');
+  return {
+    componentName: baseName,
+    style,
+    hasDuoSibling: style === 'duo',
+  };
+}
+
 /**
  * Process a single SVG file and generate React component
  */
@@ -71,9 +98,13 @@ async function processSvg(
   const svgContent = await readFile(svgPath, 'utf-8');
   const componentName = toComponentName(svgPath);
   const outputFilename = `${componentName}.tsx`;
+  const preparedSvg = addIconLayerClasses(
+    svgContent,
+    flatLayerContext(componentName)
+  );
 
   const componentCode = await transform(
-    svgContent,
+    preparedSvg,
     {
       plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
       svgoConfig: SVGOConfig,
@@ -127,6 +158,137 @@ export {};
   await writeFile(join(outputDir, 'index.ts'), indexContent);
 }
 
+async function readManifest(svgDir: string): Promise<IconManifest | null> {
+  try {
+    return JSON.parse(
+      await readFile(join(svgDir, 'manifest.json'), 'utf-8')
+    ) as IconManifest;
+  } catch (error) {
+    const code = (error as NodeJS.ErrnoException).code;
+    if (code === 'ENOENT') return null;
+    throw error;
+  }
+}
+
+interface ReactIconSource {
+  sourceName: string;
+  icon: ManifestIcon;
+}
+
+function componentSuffix(value: string): string {
+  return value
+    .split(/[^a-zA-Z0-9]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join('');
+}
+
+/**
+ * Visual styles are separate components. Size is the only generated variant
+ * prop, so `IconFoo`, `IconFooFill`, and `IconFooDuo` each switch their own
+ * 12/16/24 artwork with `size`.
+ */
+function splitStyles(icon: ManifestIcon): ReactIconSource[] {
+  const styleAxis = icon.axes.find((axis) => axis.prop === 'type');
+  const source = (name: string, figmaStyle?: string): ReactIconSource => {
+    const sourceVariants = icon.variants.filter(
+      (variant) =>
+        figmaStyle == null ||
+        variant.properties[styleAxis?.axis ?? ''] === figmaStyle
+    );
+    const axes = icon.axes
+      .filter((axis) => axis.prop === 'size')
+      .map((axis) => {
+        const values = axis.values.filter((value) =>
+          sourceVariants.some(
+            (variant) => variant.properties[axis.axis] === value.figma
+          )
+        );
+        return {
+          ...axis,
+          values,
+          defaultValue: values.some((value) => value.prop === axis.defaultValue)
+            ? axis.defaultValue
+            : (values[0]?.prop ?? ''),
+        };
+      });
+    const variants = sourceVariants.map((variant) => ({
+      ...variant,
+      key: manifestVariantKey(variant.properties, axes) || 'default',
+    }));
+    return {
+      sourceName: icon.name,
+      icon: { name, axes, variants },
+    };
+  };
+
+  if (!styleAxis) return [source(icon.name)];
+  return styleAxis.values
+    .map((value) =>
+      source(
+        value.prop === 'outline'
+          ? icon.name
+          : `${icon.name}${componentSuffix(value.prop)}`,
+        value.figma
+      )
+    )
+    .filter(({ icon: output }) => output.variants.length > 0);
+}
+
+export async function buildFromManifest(
+  svgDir: string,
+  outputDir: string,
+  manifest: IconManifest
+): Promise<number> {
+  let generated = 0;
+  const outputIcons = manifest.icons.flatMap(splitStyles);
+  const hasDuoByName = new Map(
+    manifest.icons.map((source) => [
+      source.name,
+      source.variants.some(
+        (variant) => iconLayerStyle(variant.properties) === 'duo'
+      ),
+    ])
+  );
+
+  for (const { sourceName, icon } of outputIcons) {
+    const variants: ReactVariant[] = [];
+    for (const variant of icon.variants) {
+      const sourceSvg = await readFile(
+        join(svgDir, sourceName, variant.file),
+        'utf-8'
+      );
+      const svg = addIconLayerClasses(sourceSvg, {
+        componentName: sourceName,
+        style: iconLayerStyle(variant.properties),
+        hasDuoSibling: hasDuoByName.get(sourceName) ?? false,
+      });
+      variants.push({ key: variant.key, ...svgToJsx(svg) });
+    }
+
+    if (variants.length === 0) continue;
+    const source = await format(generateReactIcon(icon, variants), {
+      filepath: `${icon.name}.tsx`,
+      singleQuote: true,
+    });
+    await writeFile(join(outputDir, `${icon.name}.tsx`), source);
+    generated += 1;
+    console.log(
+      `${colors.dim}  ✓ ${icon.name} (${variants.length} variants)${colors.reset}`
+    );
+  }
+
+  const index = await format(
+    generateReactIndex(outputIcons.map(({ icon }) => icon)),
+    {
+      filepath: 'index.ts',
+      singleQuote: true,
+    }
+  );
+  await writeFile(join(outputDir, 'index.ts'), index);
+  return generated;
+}
+
 /**
  * Main build function
  */
@@ -135,14 +297,33 @@ async function build() {
     `${colors.cyan}${colors.bright}Building icons...${colors.reset}\n`
   );
 
-  const svgDir = join(projectRoot, 'svg');
-  const outputDir = join(projectRoot, 'src', 'icons');
+  const option = (name: string) => {
+    const index = process.argv.indexOf(name);
+    return index === -1 ? null : process.argv[index + 1];
+  };
+  const svgDir = resolve(projectRoot, option('--svg-dir') ?? 'svg');
+  const outputDir = resolve(
+    projectRoot,
+    option('--output-dir') ?? join('src', 'icons')
+  );
 
   // Ensure output directory exists
   await mkdir(outputDir, { recursive: true });
 
   // Clean up existing generated files
   await cleanupGeneratedFiles(outputDir);
+
+  const manifest = await readManifest(svgDir);
+  if (manifest) {
+    console.log(
+      `${colors.blue}► Building canonical SVG variants from manifest...${colors.reset}`
+    );
+    const generated = await buildFromManifest(svgDir, outputDir, manifest);
+    console.log(
+      `\n${colors.green}${colors.bright}✓ Generated ${generated} icon components${colors.reset}`
+    );
+    return;
+  }
 
   // Check if SVG directory exists
   try {
@@ -201,7 +382,12 @@ async function build() {
   );
 }
 
-build().catch((error) => {
-  console.error(`${colors.red}Build failed: ${error}${colors.reset}`);
-  process.exit(1);
-});
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href
+) {
+  build().catch((error) => {
+    console.error(`${colors.red}Build failed: ${error}${colors.reset}`);
+    process.exit(1);
+  });
+}

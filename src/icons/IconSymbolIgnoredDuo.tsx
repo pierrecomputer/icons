@@ -9,5 +9,5 @@ export function IconSymbolIgnoredDuo({
 }: IconProps) {
   const height = size;
   const width = size === "1em" ? "1em" : Number(size) * 1;
-  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><path d="M8 0C1.412 0 0 1.412 0 8s1.412 8 8 8 8-1.412 8-8-1.412-8-8-8" opacity={0.2} /><path d="M11.53 4.47a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 0 1-1.06-1.06l6-6a.75.75 0 0 1 1.06 0" /></svg>;
+  return <svg xmlns="http://www.w3.org/2000/svg" fill={Colors[color] ?? color} viewBox="0 0 16 16" width={width} height={height} style={style} className={`pi${className != null ? ` ${className}` : ``}`} {...props} {...props}><path d="M8 0C1.412 0 0 1.412 0 8s1.412 8 8 8 8-1.412 8-8-1.412-8-8-8" className="bg" opacity={0.2} /><path d="M11.53 4.47a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 0 1-1.06-1.06l6-6a.75.75 0 0 1 1.06 0" className="fg" /></svg>;
 }
