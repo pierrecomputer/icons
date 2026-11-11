@@ -193,6 +193,7 @@ export {
 export { IconBulb, type IconBulbProps } from './IconBulb';
 export { IconBulbFill, type IconBulbFillProps } from './IconBulbFill';
 export { IconCalendar, type IconCalendarProps } from './IconCalendar';
+export { IconCalendarDuo, type IconCalendarDuoProps } from './IconCalendarDuo';
 export {
   IconCalendarFill,
   type IconCalendarFillProps,
@@ -374,6 +375,18 @@ export {
   type IconFileBadgeArrowUpFillProps,
 } from './IconFileBadgeArrowUpFill';
 export {
+  IconFileBadgeCircle,
+  type IconFileBadgeCircleProps,
+} from './IconFileBadgeCircle';
+export {
+  IconFileBadgeCircleDuo,
+  type IconFileBadgeCircleDuoProps,
+} from './IconFileBadgeCircleDuo';
+export {
+  IconFileBadgeCircleFill,
+  type IconFileBadgeCircleFillProps,
+} from './IconFileBadgeCircleFill';
+export {
   IconFileBadgeClock,
   type IconFileBadgeClockProps,
 } from './IconFileBadgeClock';
@@ -433,6 +446,30 @@ export {
   IconFileBadgePlusFill,
   type IconFileBadgePlusFillProps,
 } from './IconFileBadgePlusFill';
+export {
+  IconFileBadgeSquircle,
+  type IconFileBadgeSquircleProps,
+} from './IconFileBadgeSquircle';
+export {
+  IconFileBadgeSquircleDuo,
+  type IconFileBadgeSquircleDuoProps,
+} from './IconFileBadgeSquircleDuo';
+export {
+  IconFileBadgeSquircleFill,
+  type IconFileBadgeSquircleFillProps,
+} from './IconFileBadgeSquircleFill';
+export {
+  IconFileBadgeTriangle,
+  type IconFileBadgeTriangleProps,
+} from './IconFileBadgeTriangle';
+export {
+  IconFileBadgeTriangleDuo,
+  type IconFileBadgeTriangleDuoProps,
+} from './IconFileBadgeTriangleDuo';
+export {
+  IconFileBadgeTriangleFill,
+  type IconFileBadgeTriangleFillProps,
+} from './IconFileBadgeTriangleFill';
 export { IconFileCode, type IconFileCodeProps } from './IconFileCode';
 export { IconFileCodeDuo, type IconFileCodeDuoProps } from './IconFileCodeDuo';
 export {
@@ -496,6 +533,8 @@ export { IconFileZipFill, type IconFileZipFillProps } from './IconFileZipFill';
 export { IconFilter, type IconFilterProps } from './IconFilter';
 export { IconFilterFill, type IconFilterFillProps } from './IconFilterFill';
 export { IconFire, type IconFireProps } from './IconFire';
+export { IconFireDuo, type IconFireDuoProps } from './IconFireDuo';
+export { IconFireFill, type IconFireFillProps } from './IconFireFill';
 export { IconFlag, type IconFlagProps } from './IconFlag';
 export { IconFlagFill, type IconFlagFillProps } from './IconFlagFill';
 export { IconFolder, type IconFolderProps } from './IconFolder';
@@ -670,6 +709,7 @@ export { IconListCheck, type IconListCheckProps } from './IconListCheck';
 export { IconListDash, type IconListDashProps } from './IconListDash';
 export { IconListNumber, type IconListNumberProps } from './IconListNumber';
 export { IconLock, type IconLockProps } from './IconLock';
+export { IconLockDuo, type IconLockDuoProps } from './IconLockDuo';
 export { IconLockFill, type IconLockFillProps } from './IconLockFill';
 export { IconLogs, type IconLogsProps } from './IconLogs';
 export {
@@ -1065,6 +1105,9 @@ export { IconSwapFill, type IconSwapFillProps } from './IconSwapFill';
 export { IconTag, type IconTagProps } from './IconTag';
 export { IconTagDuo, type IconTagDuoProps } from './IconTagDuo';
 export { IconTagFill, type IconTagFillProps } from './IconTagFill';
+export { IconToken, type IconTokenProps } from './IconToken';
+export { IconTokenDuo, type IconTokenDuoProps } from './IconTokenDuo';
+export { IconTokenFill, type IconTokenFillProps } from './IconTokenFill';
 export { IconTrash, type IconTrashProps } from './IconTrash';
 export { IconTrashFill, type IconTrashFillProps } from './IconTrashFill';
 export { IconTriangle, type IconTriangleProps } from './IconTriangle';

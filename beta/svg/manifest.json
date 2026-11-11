@@ -856,6 +856,10 @@
             {
               "figma": "Fill",
               "prop": "fill"
+            },
+            {
+              "figma": "Duo",
+              "prop": "duo"
             }
           ],
           "defaultValue": "outline"
@@ -927,6 +931,30 @@
           "file": "fill-24px.svg",
           "properties": {
             "Type": "Fill",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "duo-12",
+          "file": "duo-12px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "duo-16",
+          "file": "duo-16px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "duo-24",
+          "file": "duo-24px.svg",
+          "properties": {
+            "Type": "Duo",
             "Size": "24px"
           }
         }
@@ -12903,6 +12931,10 @@
             {
               "figma": "Fill",
               "prop": "fill"
+            },
+            {
+              "figma": "Duo",
+              "prop": "duo"
             }
           ],
           "defaultValue": "outline"
@@ -12946,6 +12978,14 @@
           }
         },
         {
+          "key": "duo-12",
+          "file": "duo-12px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "12px"
+          }
+        },
+        {
           "key": "outline-16",
           "file": "outline-16px.svg",
           "properties": {
@@ -12962,6 +13002,14 @@
           }
         },
         {
+          "key": "duo-16",
+          "file": "duo-16px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "16px"
+          }
+        },
+        {
           "key": "outline-24",
           "file": "outline-24px.svg",
           "properties": {
@@ -12974,6 +13022,14 @@
           "file": "fill-24px.svg",
           "properties": {
             "Type": "Fill",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "duo-24",
+          "file": "duo-24px.svg",
+          "properties": {
+            "Type": "Duo",
             "Size": "24px"
           }
         }
@@ -15765,6 +15821,363 @@
       ]
     },
     {
+      "name": "IconFileBadgeCircle",
+      "axes": [
+        {
+          "axis": "Type",
+          "prop": "type",
+          "numeric": false,
+          "values": [
+            {
+              "figma": "Outline",
+              "prop": "outline"
+            },
+            {
+              "figma": "Fill",
+              "prop": "fill"
+            },
+            {
+              "figma": "Duo",
+              "prop": "duo"
+            }
+          ],
+          "defaultValue": "outline"
+        },
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "12px",
+              "prop": "12"
+            },
+            {
+              "figma": "16px",
+              "prop": "16"
+            },
+            {
+              "figma": "24px",
+              "prop": "24"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "outline-12",
+          "file": "outline-12px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "fill-12",
+          "file": "fill-12px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "duo-12",
+          "file": "duo-12px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "outline-16",
+          "file": "outline-16px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "fill-16",
+          "file": "fill-16px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "duo-16",
+          "file": "duo-16px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "outline-24",
+          "file": "outline-24px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "fill-24",
+          "file": "fill-24px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "duo-24",
+          "file": "duo-24px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "24px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconFileBadgeSquircle",
+      "axes": [
+        {
+          "axis": "Type",
+          "prop": "type",
+          "numeric": false,
+          "values": [
+            {
+              "figma": "Outline",
+              "prop": "outline"
+            },
+            {
+              "figma": "Fill",
+              "prop": "fill"
+            },
+            {
+              "figma": "Duo",
+              "prop": "duo"
+            }
+          ],
+          "defaultValue": "outline"
+        },
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "12px",
+              "prop": "12"
+            },
+            {
+              "figma": "16px",
+              "prop": "16"
+            },
+            {
+              "figma": "24px",
+              "prop": "24"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "outline-12",
+          "file": "outline-12px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "fill-12",
+          "file": "fill-12px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "duo-12",
+          "file": "duo-12px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "outline-16",
+          "file": "outline-16px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "fill-16",
+          "file": "fill-16px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "duo-16",
+          "file": "duo-16px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "outline-24",
+          "file": "outline-24px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "fill-24",
+          "file": "fill-24px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "duo-24",
+          "file": "duo-24px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "24px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconFileBadgeTriangle",
+      "axes": [
+        {
+          "axis": "Type",
+          "prop": "type",
+          "numeric": false,
+          "values": [
+            {
+              "figma": "Outline",
+              "prop": "outline"
+            },
+            {
+              "figma": "Fill",
+              "prop": "fill"
+            },
+            {
+              "figma": "Duo",
+              "prop": "duo"
+            }
+          ],
+          "defaultValue": "outline"
+        },
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "12px",
+              "prop": "12"
+            },
+            {
+              "figma": "16px",
+              "prop": "16"
+            },
+            {
+              "figma": "24px",
+              "prop": "24"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "outline-12",
+          "file": "outline-12px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "fill-12",
+          "file": "fill-12px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "duo-12",
+          "file": "duo-12px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "outline-16",
+          "file": "outline-16px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "fill-16",
+          "file": "fill-16px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "duo-16",
+          "file": "duo-16px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "outline-24",
+          "file": "outline-24px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "fill-24",
+          "file": "fill-24px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "duo-24",
+          "file": "duo-24px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "24px"
+          }
+        }
+      ]
+    },
+    {
       "name": "IconClockArrow",
       "axes": [
         {
@@ -17882,6 +18295,14 @@
             {
               "figma": "Outline",
               "prop": "outline"
+            },
+            {
+              "figma": "Fill",
+              "prop": "fill"
+            },
+            {
+              "figma": "Duo",
+              "prop": "duo"
             }
           ],
           "defaultValue": "outline"
@@ -17917,6 +18338,22 @@
           }
         },
         {
+          "key": "fill-12",
+          "file": "fill-12px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "duo-12",
+          "file": "duo-12px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "12px"
+          }
+        },
+        {
           "key": "outline-16",
           "file": "outline-16px.svg",
           "properties": {
@@ -17925,10 +18362,161 @@
           }
         },
         {
+          "key": "fill-16",
+          "file": "fill-16px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "duo-16",
+          "file": "duo-16px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "16px"
+          }
+        },
+        {
           "key": "outline-24",
           "file": "outline-24px.svg",
           "properties": {
             "Type": "Outline",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "fill-24",
+          "file": "fill-24px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "duo-24",
+          "file": "duo-24px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "24px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconToken",
+      "axes": [
+        {
+          "axis": "Type",
+          "prop": "type",
+          "numeric": false,
+          "values": [
+            {
+              "figma": "Outline",
+              "prop": "outline"
+            },
+            {
+              "figma": "Fill",
+              "prop": "fill"
+            },
+            {
+              "figma": "Duo",
+              "prop": "duo"
+            }
+          ],
+          "defaultValue": "outline"
+        },
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "12px",
+              "prop": "12"
+            },
+            {
+              "figma": "16px",
+              "prop": "16"
+            },
+            {
+              "figma": "24px",
+              "prop": "24"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "outline-12",
+          "file": "outline-12px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "fill-12",
+          "file": "fill-12px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "duo-12",
+          "file": "duo-12px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "outline-16",
+          "file": "outline-16px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "fill-16",
+          "file": "fill-16px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "duo-16",
+          "file": "duo-16px.svg",
+          "properties": {
+            "Type": "Duo",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "outline-24",
+          "file": "outline-24px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "fill-24",
+          "file": "fill-24px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "duo-24",
+          "file": "duo-24px.svg",
+          "properties": {
+            "Type": "Duo",
             "Size": "24px"
           }
         }
