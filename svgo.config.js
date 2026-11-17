@@ -5,6 +5,9 @@ const flattenGroups = {
       exit: (node, parentNode) => {
         if (node.name !== 'g') return;
         const groupAttrs = node.attributes ?? {};
+        // Preserve translated groups emitted by the exporter. Flattening them
+        // into their children makes a second SVGO pass change canonical SVGs.
+        if (groupAttrs.transform != null) return;
         for (const child of node.children) {
           if (child.type !== 'element') continue;
           child.attributes ??= {};
@@ -31,8 +34,18 @@ export const SVGOConfig = {
       name: 'preset-default',
       params: {
         overrides: {
+          cleanupIds: false,
+          cleanupNumericValues: false,
+          collapseGroups: false,
+          convertColors: false,
+          convertPathData: false,
           convertTransform: false,
           inlineStyles: false,
+          mergePaths: false,
+          moveElemsAttrsToGroup: false,
+          moveGroupAttrsToElems: false,
+          removeUnknownsAndDefaults: false,
+          sortAttrs: false,
         },
       },
     },
@@ -44,6 +57,7 @@ export const SVGOConfig = {
     {
       name: 'removeAttrs',
       params: {
+        preserveCurrentColor: true,
         attrs: [
           'path:fill',
           'circle:fill',
