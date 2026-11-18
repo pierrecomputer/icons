@@ -141,7 +141,7 @@ async function generateIndex(
     .sort((a, b) => a.name.localeCompare(b.name))
     .map(
       ({ name, filename }) =>
-        `export { ${name} } from './${filename.replace('.tsx', '')}';`
+        `export { ${name} } from './${filename.replace('.tsx', '.js')}';`
     )
     .join('\n');
 
