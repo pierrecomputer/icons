@@ -3,7 +3,7 @@ import type { SVGAttributes } from 'react';
 
 import { Colors, type IconProps } from '../types.js';
 
-export interface IconLockDuoProps
+export interface IconCircleInfoProps
   extends
     IconProps,
     Omit<
@@ -20,17 +20,14 @@ const variants = {
     body: (
       <>
         <path
-          d="M4.5 0a4.5 4.5 0 0 1 4.232 6.025l3.122 3.121A.5.5 0 0 1 12 9.5V11a.5.5 0 0 1-.379.485l-2 .5a.5.5 0 0 1-.596-.327L8.64 10.5H7.5A.5.5 0 0 1 7 10V8.707l-.29-.29A4.5 4.5 0 0 1 4.5 9a4.5 4.5 0 0 1 0-9"
-          className="union bg"
-          opacity="0.25"
+          d="M11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11V12C2.68629 12 0 9.31371 0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12V11C8.76142 11 11 8.76142 11 6Z"
           fill="currentColor"
         />
         <path
-          d="M4.707 4.707a1 1 0 1 1-1.414-1.414 1 1 0 0 1 1.414 1.414"
-          className="ellipse-503 fg"
+          d="M6.5 8H7.5V9H4.5V8H5.5V6.12012H5V5.12012H6.5V8Z"
           fill="currentColor"
-          opacity="1"
         />
+        <path d="M6.5 4.25H5.25V3H6.5V4.25Z" fill="currentColor" />
       </>
     ),
   },
@@ -39,17 +36,14 @@ const variants = {
     body: (
       <>
         <path
-          d="M5.5.375a5.125 5.125 0 0 1 4.985 6.318c-.054.23.006.414.1.51l4.857 4.855a.63.63 0 0 1 .183.442v2c0 .298-.21.555-.502.613l-2.5.5a.626.626 0 0 1-.73-.462l-.381-1.526H10A.625.625 0 0 1 9.375 13v-1.741l-1.07-1.07c-.116-.116-.36-.174-.631-.046A5.125 5.125 0 1 1 5.5.375"
-          className="union bg"
-          opacity="0.25"
+          d="M14.75 8C14.75 4.27208 11.7279 1.25 8 1.25C4.27208 1.25 1.25 4.27208 1.25 8C1.25 11.7279 4.27208 14.75 8 14.75V16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16V14.75C11.7279 14.75 14.75 11.7279 14.75 8Z"
           fill="currentColor"
         />
         <path
-          d="M5.56 5.56a1.5 1.5 0 1 1-2.12-2.12 1.5 1.5 0 0 1 2.12 2.12"
-          className="ellipse-503 fg"
+          d="M8.875 9.99512H10.25V11.2451H6.25V9.99512H7.625V7.24512H6.75V5.99512H8.875V9.99512Z"
           fill="currentColor"
-          opacity="1"
         />
+        <path d="M8.75 5H7.25V3.5H8.75V5Z" fill="currentColor" />
       </>
     ),
   },
@@ -58,29 +52,26 @@ const variants = {
     body: (
       <>
         <path
-          d="M9 0a9 9 0 0 1 8.465 12.05l6.242 6.243A1 1 0 0 1 24 19v3a1 1 0 0 1-.758.97l-4 1a1 1 0 0 1-1.19-.654L17.279 21H15a1 1 0 0 1-1-1v-2.586l-.577-.577A9 9 0 1 1 9 0"
-          className="union bg"
-          opacity="0.25"
+          d="M22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22V24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24V22C17.5228 22 22 17.5228 22 12Z"
           fill="currentColor"
         />
         <path
-          d="M9.414 9.414a2 2 0 1 1-2.828-2.829 2 2 0 0 1 2.828 2.829"
-          className="ellipse-503 fg"
+          d="M13 15.25H15.25V16.75H9V15.25H11.5V10.5H9.5V9H13V15.25Z"
           fill="currentColor"
-          opacity="1"
         />
+        <path d="M13 7H11V5H13V7Z" fill="currentColor" />
       </>
     ),
   },
 };
 
-export function IconLockDuo({
+export function IconCircleInfo({
   size = 16,
   color = 'currentcolor',
   style,
   className,
   ...props
-}: IconLockDuoProps) {
+}: IconCircleInfoProps) {
   const key = `${size}` as keyof typeof variants;
   const variant = variants[key];
 

@@ -3,7 +3,7 @@ import type { SVGAttributes } from 'react';
 
 import { Colors, type IconProps } from '../types.js';
 
-export interface IconSquircleInfoDuoProps
+export interface IconCircleQuestionDuoProps
   extends
     IconProps,
     Omit<
@@ -28,10 +28,10 @@ const variants = {
           fill="currentColor"
         />
         <path
-          d="M6.5 8h1v1h-3V8h1V6.12H5v-1h1.5zm0-3.75H5.25V3H6.5z"
-          className="union fg"
+          d="M5.29756 7.376V6.896C5.29756 5.416 6.80156 6.032 6.80156 5.104C6.80156 4.488 6.62556 4.32 5.97756 4.32C5.30556 4.32 5.12156 4.472 5.12956 5.016H4.17756C4.16156 3.816 4.54556 3.48 5.97756 3.48C7.37756 3.48 7.75356 3.832 7.75356 5.104C7.75356 6.744 6.24956 6.408 6.24956 6.896V7.376H5.29756ZM5.22556 9V7.904H6.32156V9H5.22556Z"
           fill="currentColor"
           opacity="1"
+          className="fg"
         />
       </>
     ),
@@ -49,10 +49,10 @@ const variants = {
           fill="currentColor"
         />
         <path
-          d="M8.875 9.995h1.375v1.25h-4v-1.25h1.375v-2.75H6.75v-1.25h2.125zM8.75 5h-1.5V3.5h1.5z"
-          className="union fg"
+          d="M7.40059 9.87V9.27C7.40059 7.42 9.28059 8.19 9.28059 7.03C9.28059 6.26 9.06059 6.05 8.25059 6.05C7.41059 6.05 7.18059 6.24 7.19059 6.92H6.00059C5.98059 5.42 6.46059 5 8.25059 5C10.0006 5 10.4706 5.44 10.4706 7.03C10.4706 9.08 8.59059 8.66 8.59059 9.27V9.87H7.40059ZM7.31059 11.9V10.53H8.68059V11.9H7.31059Z"
           fill="currentColor"
           opacity="1"
+          className="fg"
         />
       </>
     ),
@@ -70,23 +70,29 @@ const variants = {
           fill="currentColor"
         />
         <path
-          d="M13 15.25h2.25v1.5H9v-1.5h2.5V10.5h-2V9H13zM13 7h-2V5h2z"
-          className="union fg"
+          d="M10.5951 13.752V12.792C10.5951 9.832 13.6031 11.064 13.6031 9.208C13.6031 7.976 13.2511 7.64 11.9551 7.64C10.6111 7.64 10.2431 7.944 10.2591 9.032H8.35513C8.32313 6.632 9.09113 5.96 11.9551 5.96C14.7551 5.96 15.5071 6.664 15.5071 9.208C15.5071 12.488 12.4991 11.816 12.4991 12.792V13.752H10.5951ZM10.4511 17V14.808H12.6431V17H10.4511Z"
           fill="currentColor"
           opacity="1"
+          className="fg"
+        />
+        <path
+          d="M10.5951 13.752V12.792C10.5951 9.83196 13.6031 11.064 13.6031 9.20796C13.6031 7.97596 13.2511 7.63996 11.9551 7.63996C10.6111 7.63996 10.2431 7.94396 10.2591 9.03196H8.35514C8.32314 6.63196 9.09114 5.95996 11.9551 5.95996C14.7551 5.95996 15.5071 6.66396 15.5071 9.20796C15.5071 12.488 12.4991 11.816 12.4991 12.792V13.752H10.5951ZM10.4511 17V14.808H12.6431V17H10.4511Z"
+          fill="currentColor"
+          opacity="1"
+          className="fg"
         />
       </>
     ),
   },
 };
 
-export function IconSquircleInfoDuo({
+export function IconCircleQuestionDuo({
   size = 16,
   color = 'currentcolor',
   style,
   className,
   ...props
-}: IconSquircleInfoDuoProps) {
+}: IconCircleQuestionDuoProps) {
   const key = `${size}` as keyof typeof variants;
   const variant = variants[key];
 

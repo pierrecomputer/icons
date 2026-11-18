@@ -3,7 +3,7 @@ import type { SVGAttributes } from 'react';
 
 import { Colors, type IconProps } from '../types.js';
 
-export interface IconSquircleInfoProps
+export interface IconCircleClockDuoProps
   extends
     IconProps,
     Omit<
@@ -19,14 +19,18 @@ const variants = {
     viewBox: '0 0 12 12',
     body: (
       <>
-        <path
-          d="M11 6a5 5 0 1 0-5 5v1A6 6 0 1 1 6 0a6 6 0 0 1 0 12v-1a5 5 0 0 0 5-5"
+        <circle
+          cx="6"
+          cy="6"
+          r="6"
+          className="ellipse-531 bg"
+          opacity="0.25"
           fill="currentColor"
-          className="bg"
         />
         <path
-          d="M6.5 8h1v1h-3V8h1V6.12H5v-1h1.5zM6.5 4.25H5.25V3H6.5z"
+          d="M5.5 3C5.5 2.72386 5.72386 2.5 6 2.5C6.27614 2.5 6.5 2.72386 6.5 3V5.58594L8.24414 6.56348C8.485 6.69836 8.57126 7.00324 8.43652 7.24414C8.30164 7.485 7.99676 7.57126 7.75586 7.43652L5.75586 6.31641C5.59796 6.22798 5.5 6.06086 5.5 5.87988V3Z"
           fill="currentColor"
+          opacity="1"
           className="fg"
         />
       </>
@@ -36,14 +40,18 @@ const variants = {
     viewBox: '0 0 16 16',
     body: (
       <>
-        <path
-          d="M14.75 8A6.75 6.75 0 1 0 8 14.75V16A8 8 0 1 1 8 0a8 8 0 0 1 0 16v-1.25A6.75 6.75 0 0 0 14.75 8"
+        <circle
+          cx="8"
+          cy="8"
+          r="8"
+          className="ellipse-531 bg"
+          opacity="0.25"
           fill="currentColor"
-          className="bg"
         />
         <path
-          d="M8.875 9.995h1.375v1.25h-4v-1.25h1.375v-2.75H6.75v-1.25h2.125zM8.75 5h-1.5V3.5h1.5z"
+          d="M7.375 3.5C7.375 3.15482 7.65482 2.875 8 2.875C8.34518 2.875 8.625 3.15482 8.625 3.5V7.63867L11.3125 9.19043C11.6114 9.36302 11.7136 9.74599 11.541 10.0449C11.3683 10.3435 10.9863 10.4459 10.6875 10.2734L7.6875 8.54102C7.49419 8.42936 7.375 8.22325 7.375 8V3.5Z"
           fill="currentColor"
+          opacity="1"
           className="fg"
         />
       </>
@@ -53,14 +61,18 @@ const variants = {
     viewBox: '0 0 24 24',
     body: (
       <>
-        <path
-          d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10v2C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12v-2c5.523 0 10-4.477 10-10"
+        <circle
+          cx="12"
+          cy="12"
+          r="12"
+          className="ellipse-531 bg"
+          opacity="0.25"
           fill="currentColor"
-          className="bg"
         />
         <path
-          d="M13 15.25h2.25v1.5H9v-1.5h2.5V10.5h-2V9H13zM13 7h-2V5h2z"
+          d="M11 5.5C11 4.94772 11.4477 4.5 12 4.5C12.5523 4.5 13 4.94772 13 5.5V12.4336L17.5146 15.1426C17.9881 15.4268 18.1415 16.0411 17.8574 16.5146C17.5732 16.9881 16.9589 17.1415 16.4854 16.8574L11.4854 13.8574C11.1842 13.6767 11 13.3512 11 13V5.5Z"
           fill="currentColor"
+          opacity="1"
           className="fg"
         />
       </>
@@ -68,13 +80,13 @@ const variants = {
   },
 };
 
-export function IconSquircleInfo({
+export function IconCircleClockDuo({
   size = 16,
   color = 'currentcolor',
   style,
   className,
   ...props
-}: IconSquircleInfoProps) {
+}: IconCircleClockDuoProps) {
   const key = `${size}` as keyof typeof variants;
   const variant = variants[key];
 

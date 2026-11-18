@@ -3,7 +3,7 @@ import type { SVGAttributes } from 'react';
 
 import { Colors, type IconProps } from '../types.js';
 
-export interface IconSquircleArrow45DotProps
+export interface IconCircleInfoDuoProps
   extends
     IconProps,
     Omit<
@@ -19,15 +19,19 @@ const variants = {
     viewBox: '0 0 12 12',
     body: (
       <>
-        <path
-          d="M11 6a5 5 0 1 0-5 5v1A6 6 0 1 1 6 0a6 6 0 0 1 0 12v-1a5 5 0 0 0 5-5"
+        <circle
+          cx="6"
+          cy="6"
+          r="6"
+          className="ellipse-531 bg"
+          opacity="0.25"
           fill="currentColor"
-          className="bg"
         />
         <path
-          d="M5.5 3a.5.5 0 0 1 1 0v2.586l1.744.977a.5.5 0 0 1-.488.874l-2-1.12A.5.5 0 0 1 5.5 5.88z"
+          d="M6.5 8H7.5V9H4.5V8H5.5V6.12012H5V5.12012H6.5V8ZM6.5 4.25H5.25V3H6.5V4.25Z"
+          className="union fg"
           fill="currentColor"
-          className="fg"
+          opacity="1"
         />
       </>
     ),
@@ -36,15 +40,19 @@ const variants = {
     viewBox: '0 0 16 16',
     body: (
       <>
-        <path
-          d="M14.75 8A6.75 6.75 0 1 0 8 14.75V16A8 8 0 1 1 8 0a8 8 0 0 1 0 16v-1.25A6.75 6.75 0 0 0 14.75 8"
+        <circle
+          cx="8"
+          cy="8"
+          r="8"
+          className="ellipse-531 bg"
+          opacity="0.25"
           fill="currentColor"
-          className="bg"
         />
         <path
-          d="M7.375 3.5a.625.625 0 1 1 1.25 0v4.139l2.688 1.551a.626.626 0 0 1-.626 1.083l-3-1.732A.63.63 0 0 1 7.376 8z"
+          d="M8.875 9.99512H10.25V11.2451H6.25V9.99512H7.625V7.24512H6.75V5.99512H8.875V9.99512ZM8.75 5H7.25V3.5H8.75V5Z"
+          className="union fg"
           fill="currentColor"
-          className="fg"
+          opacity="1"
         />
       </>
     ),
@@ -53,28 +61,32 @@ const variants = {
     viewBox: '0 0 24 24',
     body: (
       <>
-        <path
-          d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12s4.477 10 10 10v2C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12v-2c5.523 0 10-4.477 10-10"
+        <circle
+          cx="12"
+          cy="12"
+          r="12"
+          className="ellipse-531 bg"
+          opacity="0.25"
           fill="currentColor"
-          className="bg"
         />
         <path
-          d="M11 5.5a1 1 0 1 1 2 0v6.934l4.515 2.709a1 1 0 0 1-1.03 1.714l-5-3A1 1 0 0 1 11 13z"
+          d="M13 15.25H15.25V16.75H9V15.25H11.5V10.5H9.5V9H13V15.25ZM13 7H11V5H13V7Z"
+          className="union fg"
           fill="currentColor"
-          className="fg"
+          opacity="1"
         />
       </>
     ),
   },
 };
 
-export function IconSquircleArrow45Dot({
+export function IconCircleInfoDuo({
   size = 16,
   color = 'currentcolor',
   style,
   className,
   ...props
-}: IconSquircleArrow45DotProps) {
+}: IconCircleInfoDuoProps) {
   const key = `${size}` as keyof typeof variants;
   const variant = variants[key];
 

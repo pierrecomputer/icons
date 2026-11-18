@@ -28,7 +28,7 @@ const variants = {
           fill="currentColor"
         />
         <path
-          d="M8 5.5a.5.5 0 0 1 0 1H4a.5.5 0 0 1 0-1z"
+          d="M8 5.5C8.27614 5.5 8.5 5.72386 8.5 6C8.5 6.27614 8.27614 6.5 8 6.5H4C3.72386 6.5 3.5 6.27614 3.5 6C3.5 5.72386 3.72386 5.5 4 5.5H8Z"
           fill="currentColor"
           opacity="1"
           className="fg"
@@ -49,7 +49,7 @@ const variants = {
           fill="currentColor"
         />
         <path
-          d="M11 7.375a.625.625 0 1 1 0 1.25H5a.625.625 0 1 1 0-1.25z"
+          d="M11 7.375C11.3452 7.375 11.625 7.65482 11.625 8C11.625 8.34518 11.3452 8.625 11 8.625H5C4.65482 8.625 4.375 8.34518 4.375 8C4.375 7.65482 4.65482 7.375 5 7.375H11Z"
           fill="currentColor"
           opacity="1"
           className="fg"
@@ -70,7 +70,7 @@ const variants = {
           fill="currentColor"
         />
         <path
-          d="M17 11a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2z"
+          d="M17 11C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H7C6.44772 13 6 12.5523 6 12C6 11.4477 6.44772 11 7 11H17Z"
           fill="currentColor"
           opacity="1"
           className="fg"

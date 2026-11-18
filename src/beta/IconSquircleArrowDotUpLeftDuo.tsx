@@ -3,7 +3,7 @@ import type { SVGAttributes } from 'react';
 
 import { Colors, type IconProps } from '../types.js';
 
-export interface IconSquircleArrow315DotDuoProps
+export interface IconSquircleArrowDotUpLeftDuoProps
   extends
     IconProps,
     Omit<
@@ -20,7 +20,7 @@ const variants = {
     body: (
       <>
         <path
-          d="M6 0C1.059 0 0 1.059 0 6s1.059 6 6 6 6-1.059 6-6-1.059-6-6-6"
+          d="M6 0C1.059 0 0 1.059 0 6C0 10.941 1.059 12 6 12C10.941 12 12 10.941 12 6C12 1.059 10.941 0 6 0Z"
           className="bg"
           opacity="0.25"
           fill="currentColor"
@@ -34,7 +34,7 @@ const variants = {
           opacity="1"
         />
         <path
-          d="M3.5 6.5V4a.5.5 0 0 1 .5-.5h2.5a.5.5 0 0 1 0 1H5.207l3.147 3.146a.5.5 0 1 1-.708.708L4.5 5.207V6.5a.5.5 0 0 1-1 0"
+          d="M3.5 6.5V4C3.5 3.72386 3.72386 3.5 4 3.5H6.5C6.77614 3.5 7 3.72386 7 4C7 4.27614 6.77614 4.5 6.5 4.5H5.20703L8.35352 7.64648C8.54878 7.84175 8.54878 8.15825 8.35352 8.35352C8.15825 8.54878 7.84175 8.54878 7.64648 8.35352L4.5 5.20703V6.5C4.5 6.77614 4.27614 7 4 7C3.72386 7 3.5 6.77614 3.5 6.5Z"
           fill="currentColor"
           opacity="1"
           className="fg"
@@ -47,13 +47,13 @@ const variants = {
     body: (
       <>
         <path
-          d="M8 0C1.412 0 0 1.412 0 8s1.412 8 8 8 8-1.412 8-8-1.412-8-8-8"
+          d="M8 0C1.412 0 0 1.412 0 8C0 14.588 1.412 16 8 16C14.588 16 16 14.588 16 8C16 1.412 14.588 0 8 0Z"
           className="bg"
           opacity="0.25"
           fill="currentColor"
         />
         <path
-          d="M4.375 8.5V5c0-.345.28-.625.625-.625h3.5a.625.625 0 1 1 0 1.25H6.51l4.932 4.933a.626.626 0 0 1-.884.884L5.625 6.51V8.5a.625.625 0 1 1-1.25 0"
+          d="M4.375 8.5V5C4.375 4.65482 4.65482 4.375 5 4.375H8.5C8.84518 4.375 9.125 4.65482 9.125 5C9.125 5.34518 8.84518 5.625 8.5 5.625H6.50977L11.4424 10.5576C11.6865 10.8017 11.6865 11.1983 11.4424 11.4424C11.1983 11.6865 10.8017 11.6865 10.5576 11.4424L5.625 6.50977V8.5C5.625 8.84518 5.34518 9.125 5 9.125C4.65482 9.125 4.375 8.84518 4.375 8.5Z"
           fill="currentColor"
           opacity="1"
           className="fg"
@@ -74,13 +74,13 @@ const variants = {
     body: (
       <>
         <path
-          d="M12 0C2.118 0 0 2.118 0 12s2.118 12 12 12 12-2.118 12-12S21.882 0 12 0"
+          d="M12 0C2.118 0 0 2.118 0 12C0 21.882 2.118 24 12 24C21.882 24 24 21.882 24 12C24 2.118 21.882 0 12 0Z"
           className="bg"
           opacity="0.25"
           fill="currentColor"
         />
         <path
-          d="M6 12.5V7a1 1 0 0 1 1-1h5.5a1 1 0 1 1 0 2H9.414l6.293 6.293a1 1 0 1 1-1.414 1.414L8 9.414V12.5a1 1 0 1 1-2 0"
+          d="M6 12.5V7C6 6.44772 6.44772 6 7 6H12.5C13.0523 6 13.5 6.44772 13.5 7C13.5 7.55228 13.0523 8 12.5 8H9.41406L15.707 14.293C16.0976 14.6835 16.0976 15.3165 15.707 15.707C15.3165 16.0976 14.6835 16.0976 14.293 15.707L8 9.41406V12.5C8 13.0523 7.55228 13.5 7 13.5C6.44772 13.5 6 13.0523 6 12.5Z"
           fill="currentColor"
           opacity="1"
           className="fg"
@@ -98,13 +98,13 @@ const variants = {
   },
 };
 
-export function IconSquircleArrow315DotDuo({
+export function IconSquircleArrowDotUpLeftDuo({
   size = 16,
   color = 'currentcolor',
   style,
   className,
   ...props
-}: IconSquircleArrow315DotDuoProps) {
+}: IconSquircleArrowDotUpLeftDuoProps) {
   const key = `${size}` as keyof typeof variants;
   const variant = variants[key];
 

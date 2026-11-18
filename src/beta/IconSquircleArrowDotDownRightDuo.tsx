@@ -3,7 +3,7 @@ import type { SVGAttributes } from 'react';
 
 import { Colors, type IconProps } from '../types.js';
 
-export interface IconSquircleArrow135DotDuoProps
+export interface IconSquircleArrowDotDownRightDuoProps
   extends
     IconProps,
     Omit<
@@ -20,22 +20,21 @@ const variants = {
     body: (
       <>
         <path
-          d="M6 0C1.059 0 0 1.059 0 6s1.059 6 6 6 6-1.059 6-6-1.059-6-6-6"
+          d="M6 0C1.059 0 0 1.059 0 6C0 10.941 1.059 12 6 12C10.941 12 12 10.941 12 6C12 1.059 10.941 0 6 0Z"
           className="bg"
           opacity="0.25"
           fill="currentColor"
         />
         <circle
-          cx="1"
-          cy="1"
+          cx="4"
+          cy="4"
           r="1"
           className="ellipse-525 fg"
-          transform="matrix(0 -1 -1 0 5 5)"
           fill="currentColor"
           opacity="1"
         />
         <path
-          d="M5.5 8.5a.5.5 0 0 1 0-1h1.293L3.646 4.353a.5.5 0 1 1 .708-.707L7.5 6.793V5.5a.5.5 0 0 1 1 0V8a.5.5 0 0 1-.5.5z"
+          d="M5.5 8.49996C5.22386 8.49996 5 8.2761 5 7.99996C5 7.72382 5.22386 7.49996 5.5 7.49996H6.79297L3.64648 4.35348C3.45122 4.15822 3.45122 3.84171 3.64648 3.64645C3.84175 3.45118 4.15825 3.45118 4.35352 3.64645L7.5 6.79293V5.49996C7.5 5.22382 7.72386 4.99996 8 4.99996C8.27614 4.99996 8.5 5.22382 8.5 5.49996V7.99996C8.5 8.2761 8.27614 8.49996 8 8.49996H5.5Z"
           fill="currentColor"
           opacity="1"
           className="fg"
@@ -48,23 +47,22 @@ const variants = {
     body: (
       <>
         <path
-          d="M8 0C1.412 0 0 1.412 0 8s1.412 8 8 8 8-1.412 8-8-1.412-8-8-8"
+          d="M8 0C1.412 0 0 1.412 0 8C0 14.588 1.412 16 8 16C14.588 16 16 14.588 16 8C16 1.412 14.588 0 8 0Z"
           className="bg"
           opacity="0.25"
           fill="currentColor"
         />
         <path
-          d="M7.5 11.625a.625.625 0 0 1 0-1.25h1.99L4.558 5.442a.626.626 0 0 1 .884-.884l4.933 4.932V7.5a.625.625 0 1 1 1.25 0V11c0 .345-.28.625-.625.625z"
+          d="M7.5 11.625C7.15482 11.625 6.875 11.3451 6.875 11C6.875 10.6548 7.15482 10.375 7.5 10.375H9.49023L4.55762 5.44234C4.31354 5.19826 4.31354 4.80165 4.55762 4.55757C4.80169 4.31349 5.19831 4.31349 5.44238 4.55757L10.375 9.49019V7.49995C10.375 7.15477 10.6548 6.87495 11 6.87495C11.3452 6.87495 11.625 7.15477 11.625 7.49995V11C11.625 11.3451 11.3452 11.625 11 11.625H7.5Z"
           fill="currentColor"
           opacity="1"
           className="fg"
         />
         <circle
-          cx="1.5"
-          cy="1.5"
+          cx="5.5"
+          cy="5.5"
           r="1.5"
           className="ellipse-525 fg"
-          transform="matrix(0 -1 -1 0 7 7)"
           fill="currentColor"
           opacity="1"
         />
@@ -76,23 +74,22 @@ const variants = {
     body: (
       <>
         <path
-          d="M12 0C2.118 0 0 2.118 0 12s2.118 12 12 12 12-2.118 12-12S21.882 0 12 0"
+          d="M12 0C2.118 0 0 2.118 0 12C0 21.882 2.118 24 12 24C21.882 24 24 21.882 24 12C24 2.118 21.882 0 12 0Z"
           className="bg"
           opacity="0.25"
           fill="currentColor"
         />
         <path
-          d="M11.5 17.75a.75.75 0 1 1 0-1.5h3.69L8.47 9.53a.75.75 0 1 1 1.06-1.06l6.72 6.72V11.5a.75.75 0 0 1 1.5 0V17a.75.75 0 0 1-.75.75z"
+          d="M11.5 17.7499C11.0858 17.7499 10.75 17.4142 10.75 16.9999C10.75 16.5857 11.0858 16.2499 11.5 16.2499H15.1895L8.46973 9.53022C8.17683 9.23732 8.17683 8.76256 8.46973 8.46967C8.76262 8.17678 9.23738 8.17678 9.53027 8.46967L16.25 15.1894V11.4999C16.25 11.0857 16.5858 10.7499 17 10.7499C17.4142 10.7499 17.75 11.0857 17.75 11.4999V16.9999C17.75 17.4142 17.4142 17.7499 17 17.7499H11.5Z"
           fill="currentColor"
           opacity="1"
           className="fg"
         />
         <circle
-          cx="2"
-          cy="2"
+          cx="9"
+          cy="9"
           r="2"
           className="ellipse-525 fg"
-          transform="matrix(0 -1 -1 0 11 11)"
           fill="currentColor"
           opacity="1"
         />
@@ -101,13 +98,13 @@ const variants = {
   },
 };
 
-export function IconSquircleArrow135DotDuo({
+export function IconSquircleArrowDotDownRightDuo({
   size = 16,
   color = 'currentcolor',
   style,
   className,
   ...props
-}: IconSquircleArrow135DotDuoProps) {
+}: IconSquircleArrowDotDownRightDuoProps) {
   const key = `${size}` as keyof typeof variants;
   const variant = variants[key];
 

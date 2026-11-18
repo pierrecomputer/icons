@@ -3,7 +3,7 @@ import type { SVGAttributes } from 'react';
 
 import { Colors, type IconProps } from '../types.js';
 
-export interface IconArrowsExpandFillProps
+export interface IconCircleInfoFillProps
   extends
     IconProps,
     Omit<
@@ -19,8 +19,8 @@ const variants = {
     viewBox: '0 0 12 12',
     body: (
       <path
-        d="M4.558 6.558a.626.626 0 0 1 .884.884L2.51 10.375H4.5a.625.625 0 1 1 0 1.25H1A.625.625 0 0 1 .375 11V7.5a.625.625 0 1 1 1.25 0v1.99zM10 .375c.345 0 .625.28.625.625v3.5a.625.625 0 1 1-1.25 0V2.51L6.442 5.442a.626.626 0 0 1-.884-.884L8.49 1.625H6.5a.625.625 0 1 1 0-1.25z"
-        className="union"
+        d="M6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6C0 2.68629 2.68629 0 6 0ZM5 5.12012V6.12012H5.5V8H4.5V9H7.5V8H6.5V5.12012H5ZM5.25 3V4.25H6.5V3H5.25Z"
+        className="subtract"
         fill="currentColor"
       />
     ),
@@ -29,8 +29,8 @@ const variants = {
     viewBox: '0 0 16 16',
     body: (
       <path
-        d="M6.47 8.47a.75.75 0 1 1 1.06 1.06l-3.72 3.72H6.5a.75.75 0 0 1 0 1.5H2a.75.75 0 0 1-.75-.75V9.5a.75.75 0 0 1 1.5 0v2.69zM14 1.25a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0V3.81L9.53 7.53a.75.75 0 1 1-1.06-1.06l3.72-3.72H9.5a.75.75 0 0 1 0-1.5z"
-        className="union"
+        d="M8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0ZM6.75 5.99512V7.24512H7.625V9.99512H6.25V11.2451H10.25V9.99512H8.875V5.99512H6.75ZM7.25 3.5V5H8.75V3.5H7.25Z"
+        className="subtract"
         fill="currentColor"
       />
     ),
@@ -39,21 +39,21 @@ const variants = {
     viewBox: '0 0 24 24',
     body: (
       <path
-        d="M9.116 13.116a1.25 1.25 0 0 1 1.768 1.768L5.018 20.75H9a1.25 1.25 0 1 1 0 2.5H2c-.69 0-1.25-.56-1.25-1.25v-7a1.25 1.25 0 1 1 2.5 0v3.982zM22 .75c.69 0 1.25.56 1.25 1.25v7a1.25 1.25 0 1 1-2.5 0V5.018l-5.866 5.866a1.25 1.25 0 0 1-1.768-1.768l5.866-5.866H15a1.25 1.25 0 1 1 0-2.5z"
-        className="union"
+        d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM9.5 9V10.5H11.5V15.25H9V16.75H15.25V15.25H13V9H9.5ZM11 5V7H13V5H11Z"
+        className="subtract"
         fill="currentColor"
       />
     ),
   },
 };
 
-export function IconArrowsExpandFill({
+export function IconCircleInfoFill({
   size = 16,
   color = 'currentcolor',
   style,
   className,
   ...props
-}: IconArrowsExpandFillProps) {
+}: IconCircleInfoFillProps) {
   const key = `${size}` as keyof typeof variants;
   const variant = variants[key];
 

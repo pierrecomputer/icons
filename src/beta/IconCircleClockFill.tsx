@@ -3,7 +3,7 @@ import type { SVGAttributes } from 'react';
 
 import { Colors, type IconProps } from '../types.js';
 
-export interface IconSquircleInfoFillProps
+export interface IconCircleClockFillProps
   extends
     IconProps,
     Omit<
@@ -19,7 +19,7 @@ const variants = {
     viewBox: '0 0 12 12',
     body: (
       <path
-        d="M6 0a6 6 0 1 1 0 12A6 6 0 0 1 6 0M5 5.12v1h.5V8h-1v1h3V8h-1V5.12zM5.25 3v1.25H6.5V3z"
+        d="M6 0C9.31371 0 12 2.68629 12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6C0 2.68629 2.68629 0 6 0ZM6 2.5C5.72386 2.5 5.5 2.72386 5.5 3V5.87988C5.5 6.06086 5.59796 6.22798 5.75586 6.31641L7.75586 7.43652C7.99676 7.57126 8.30164 7.485 8.43652 7.24414C8.57126 7.00324 8.485 6.69836 8.24414 6.56348L6.5 5.58594V3C6.5 2.72386 6.27614 2.5 6 2.5Z"
         className="subtract"
         fill="currentColor"
       />
@@ -29,7 +29,7 @@ const variants = {
     viewBox: '0 0 16 16',
     body: (
       <path
-        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M6.75 5.995v1.25h.875v2.75H6.25v1.25h4v-1.25H8.875v-4zm.5-2.495V5h1.5V3.5z"
+        d="M8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0ZM8 2.875C7.65482 2.875 7.375 3.15482 7.375 3.5V8C7.375 8.22325 7.49419 8.42936 7.6875 8.54102L10.6875 10.2734C10.9863 10.4459 11.3683 10.3435 11.541 10.0449C11.7136 9.74599 11.6114 9.36302 11.3125 9.19043L8.625 7.63867V3.5C8.625 3.15482 8.34518 2.875 8 2.875Z"
         className="subtract"
         fill="currentColor"
       />
@@ -39,7 +39,7 @@ const variants = {
     viewBox: '0 0 24 24',
     body: (
       <path
-        d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0M9.5 9v1.5h2v4.75H9v1.5h6.25v-1.5H13V9zM11 5v2h2V5z"
+        d="M12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0ZM12 4.5C11.4477 4.5 11 4.94772 11 5.5V13C11 13.3512 11.1842 13.6767 11.4854 13.8574L16.4854 16.8574C16.9589 17.1415 17.5732 16.9881 17.8574 16.5146C18.1415 16.0411 17.9881 15.4268 17.5146 15.1426L13 12.4336V5.5C13 4.94772 12.5523 4.5 12 4.5Z"
         className="subtract"
         fill="currentColor"
       />
@@ -47,13 +47,13 @@ const variants = {
   },
 };
 
-export function IconSquircleInfoFill({
+export function IconCircleClockFill({
   size = 16,
   color = 'currentcolor',
   style,
   className,
   ...props
-}: IconSquircleInfoFillProps) {
+}: IconCircleClockFillProps) {
   const key = `${size}` as keyof typeof variants;
   const variant = variants[key];
 
