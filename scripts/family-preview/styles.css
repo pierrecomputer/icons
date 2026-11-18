@@ -1,0 +1,395 @@
+:root {
+  color-scheme: light dark;
+  --background: light-dark(#f5f5f5, #090909);
+  --panel: light-dark(#fff, #141414);
+  --panel-muted: light-dark(#f7f7f7, #1b1b1b);
+  --foreground: light-dark(#242424, #f5f5f5);
+  --muted: light-dark(#737373, #8b8b8b);
+  --border: light-dark(#dedede, #2a2a2a);
+  --accent: light-dark(#0878e8, #4c9aff);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  color: var(--foreground);
+  background: var(--background);
+}
+
+button,
+input {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  min-height: 64px;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.brand {
+  display: grid;
+  min-width: 210px;
+  gap: 2px;
+}
+
+.brand strong {
+  font-size: 15px;
+}
+
+.brand span,
+.pane-count {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.toolbar input {
+  width: min(360px, 35vw);
+  margin-left: auto;
+  padding: 8px 11px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  background: var(--panel-muted);
+}
+
+.toolbar input:focus {
+  border-color: var(--accent);
+}
+
+.toolbar-button,
+.multi-toggle {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-muted);
+}
+
+.toolbar-button:hover,
+.multi-toggle:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+
+.workspace {
+  min-height: 0;
+  flex: 1;
+  padding: 8px;
+}
+
+.pierre-layout {
+  --layout-accent: var(--accent);
+  --layout-border: var(--border);
+  --layout-pane-background: var(--panel);
+}
+
+.pierre-layout-header {
+  background: var(--panel-muted);
+  font-weight: 600;
+}
+
+.pierre-layout-content {
+  overscroll-behavior: contain;
+  container-name: pane;
+  container-type: size;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(86px, 1fr));
+  gap: 6px;
+  padding: 8px;
+}
+
+.icon-card {
+  display: flex;
+  min-width: 0;
+  min-height: 76px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 4px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+}
+
+.icon-card:hover,
+.icon-card:focus-visible {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+  outline: none;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.icon-card > span:last-child {
+  max-width: 100%;
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.25;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.icon-card:hover > span:last-child,
+.icon-card:focus-visible > span:last-child {
+  color: currentcolor;
+}
+
+.icon-glyph,
+.detail-glyph {
+  display: grid;
+  place-items: center;
+}
+
+.icon-glyph svg {
+  width: 20px;
+  height: 20px;
+}
+
+.empty-family {
+  margin: 0;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.detail-pane {
+  display: grid;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(240px, 42%) minmax(0, 1fr);
+  overflow: hidden;
+}
+
+.detail-preview {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--panel-muted);
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-controls {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.segmented {
+  display: inline-flex;
+  padding: 2px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--foreground) 8%, transparent);
+}
+
+.segmented button {
+  padding: 5px 7px;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: capitalize;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.segmented button[aria-pressed='true'] {
+  color: var(--foreground);
+  background: var(--panel);
+  box-shadow: 0 1px 2px rgb(0 0 0 / 12%);
+}
+
+.detail-glyph {
+  width: min(150px, 70%);
+  margin: auto;
+  aspect-ratio: 1;
+}
+
+.detail-glyph svg {
+  width: 72%;
+  height: 72%;
+}
+
+.detail-pane[data-multi='true'] .detail-glyph .bg {
+  color: var(--multi-bg);
+}
+
+.detail-pane[data-multi='true'] .detail-glyph .fg {
+  color: var(--multi-fg);
+}
+
+.multi-toggle {
+  padding: 6px 9px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.multi-toggle[aria-pressed='true'] {
+  color: var(--foreground);
+  border-color: var(--accent);
+}
+
+.multi-toggle:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.source-panel {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+}
+
+.source-mode {
+  position: sticky;
+  z-index: 1;
+  top: 8px;
+  left: 8px;
+  margin: 8px 8px 0;
+  background: var(--panel-muted);
+}
+
+.source-code {
+  min-width: max-content;
+  padding: 16px;
+}
+
+.source-code .highlights {
+  margin: 0;
+  padding: 0;
+  color: var(--muted);
+  font:
+    12px/1.55 ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  background: transparent !important;
+  tab-size: 2;
+}
+
+.source-code .highlights code {
+  font: inherit;
+}
+
+@media (max-width: 700px) {
+  .brand {
+    min-width: 0;
+  }
+
+  .brand span,
+  .pane-count {
+    display: none;
+  }
+
+  .toolbar input {
+    width: auto;
+    min-width: 0;
+  }
+}
+
+@container pane (max-width: 280px) {
+  .icon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(68px, 1fr));
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .icon-card {
+    min-height: 68px;
+    gap: 5px;
+  }
+
+  .icon-card > span:last-child {
+    font-size: 9px;
+  }
+}
+
+@container pane (min-width: 480px) {
+  .icon-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+  }
+}
+
+@container pane (max-height: 520px) {
+  .icon-card {
+    min-height: 68px;
+  }
+}
+
+@container pane (min-width: 760px) and (min-aspect-ratio: 4 / 3) {
+  .detail-pane {
+    grid-template-columns: minmax(260px, 38%) minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .detail-preview {
+    border-right: 1px solid var(--border);
+    border-bottom: 0;
+  }
+
+  .detail-glyph {
+    width: min(180px, 80%);
+  }
+}
+
+@container pane (max-width: 560px) {
+  .detail-preview {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .detail-glyph {
+    width: min(120px, 60%);
+  }
+}
+
+@container pane (max-height: 620px) {
+  .detail-preview {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .detail-glyph {
+    width: min(120px, 60%);
+  }
+}
