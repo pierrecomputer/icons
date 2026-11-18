@@ -4,14 +4,15 @@ import { basename, dirname, extname, join, resolve } from 'path';
 import { optimize } from 'svgo';
 import { fileURLToPath, pathToFileURL } from 'url';
 
+import { SVGOConfig } from '../svgo.config.js';
+
 import {
   type IconManifest,
   addIconLayerClasses,
   iconLayerStyle,
   prefixSvgIds,
   readSvgRoot,
-} from '../../figma/packages/svg-pipeline/src/index.ts';
-import { SVGOConfig } from '../svgo.config.js';
+} from './svg-pipeline/index.ts';
 
 const colors = {
   reset: '\x1b[0m',

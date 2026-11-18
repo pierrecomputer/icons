@@ -12,7 +12,7 @@ import {
   type IconLayerContext,
   addIconLayerClasses,
   iconLayerStyle,
-} from '../../figma/packages/svg-pipeline/src/index.ts';
+} from './svg-pipeline/index.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

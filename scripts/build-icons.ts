@@ -5,6 +5,8 @@ import { basename, dirname, extname, join, resolve } from 'path';
 import { format } from 'prettier';
 import { fileURLToPath, pathToFileURL } from 'url';
 
+import { SVGOConfig } from '../svgo.config.js';
+
 import {
   type IconLayerContext,
   type IconManifest,
@@ -15,9 +17,7 @@ import {
   generateReactIndex,
   iconLayerStyle,
   manifestVariantKey,
-} from '../../figma/packages/svg-pipeline/src/index.ts';
-import { SVGOConfig } from '../svgo.config.js';
-
+} from './svg-pipeline/index.ts';
 import { svgToJsx } from './svg-to-jsx.js';
 import template from './svgr-template.js';
 

@@ -9,12 +9,13 @@ import { format } from 'prettier';
 import { optimize } from 'svgo';
 import { fileURLToPath, pathToFileURL } from 'url';
 
+import { SVGOConfig } from '../svgo.config.js';
+
 import {
   type IconLayerContext,
   addIconLayerClasses,
   iconLayerStyle,
-} from '../../figma/packages/svg-pipeline/src/index.ts';
-import { SVGOConfig } from '../svgo.config.js';
+} from './svg-pipeline/index.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

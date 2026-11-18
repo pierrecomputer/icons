@@ -4,10 +4,9 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from 'fs/promises';
 import { tmpdir } from 'os';
 import { join } from 'path';
 
-import type { IconManifest } from '../../figma/packages/svg-pipeline/src/index.ts';
-
 import { buildFromManifest } from './build-icons.ts';
 import { symbolsFromManifest } from './build-sprite.ts';
+import type { IconManifest } from './svg-pipeline/index.ts';
 
 const root = await mkdtemp(join(tmpdir(), 'pierre-icons-'));
 const svgDir = join(root, 'svg');

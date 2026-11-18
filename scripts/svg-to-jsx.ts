@@ -3,10 +3,7 @@
 // @ts-expect-error -- untyped dependency
 import { parse } from 'svg-parser';
 
-import {
-  readSvgRoot,
-  referencedSvgIds,
-} from '../../figma/packages/svg-pipeline/src/index.ts';
+import { readSvgRoot, referencedSvgIds } from './svg-pipeline/index.ts';
 
 interface HastNode {
   type: 'root' | 'element' | 'text' | 'comment';
