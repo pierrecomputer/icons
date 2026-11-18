@@ -34,7 +34,6 @@ export const SVGOConfig = {
       name: 'preset-default',
       params: {
         overrides: {
-          cleanupIds: false,
           cleanupNumericValues: false,
           collapseGroups: false,
           convertColors: false,

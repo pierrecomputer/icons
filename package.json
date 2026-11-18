@@ -34,6 +34,7 @@
     "dist",
     "svg",
     "beta/svg",
+    "beta/REPORT.md",
     "LICENSE",
     "README"
   ],
@@ -42,7 +43,8 @@
     "tag": "beta"
   },
   "scripts": {
-    "build": "npm run clean && npm run icons:build && npm run tsc",
+    "build": "npm run clean && npm run icons:audit && npm run icons:build && npm run tsc",
+    "icons:audit": "tsx scripts/audit-export.ts",
     "icons:build": "tsx scripts/build-icons.ts --svg-dir beta/svg --output-dir src/beta",
     "icons:build:stable": "tsx scripts/build-icons.ts",
     "icons:layers": "tsx scripts/process-duo-layers.ts",
@@ -52,6 +54,7 @@
     "icons:preview:classic": "tsx scripts/build-preview.ts",
     "icons:preview:families": "tsx scripts/build-family-preview.ts",
     "icons:preview:catalog": "tsx scripts/build-catalog-preview.ts",
+    "icons:normalize": "tsx scripts/normalize-export.ts",
     "icons": "npm run icons:build && npm run icons:preview",
     "test": "bun test",
     "tsc": "tsc",
