@@ -117,3 +117,16 @@ interface IconProps {
 ## Preview
 
 After building, open `dist/index.html` in a browser to browse all icons.
+
+## Releasing a beta
+
+The npm package must trust the GitHub Actions publisher for repository
+`pierrecomputer/icons` and workflow `release.yml`. Publishing then uses GitHub
+OIDC and does not require a long-lived npm token.
+
+1. Update the version in `package.json` and `package-lock.json`.
+2. Merge a commit that passes CI.
+3. Create a GitHub prerelease with a tag matching `v<package version>`.
+
+The release workflow validates the package and publishes it with npm's `beta`
+tag and provenance.
