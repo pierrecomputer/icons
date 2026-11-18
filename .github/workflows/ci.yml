@@ -35,6 +35,9 @@ jobs:
       - name: Test SVG generation
         run: npm test
 
+      - name: Audit canonical export
+        run: npm run icons:audit
+
       - name: Build package
         run: npm run build
 

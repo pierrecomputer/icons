@@ -19,10 +19,14 @@ const variants = {
     viewBox: '0 0 12 12',
     body: (
       <>
-        <path d="M6 2a4 4 0 1 0 0 8z" fill="currentColor" className="fg" />
         <path
+          d="M6 2C3.79086 2 2 3.79086 2 6C2 8.20914 3.79086 10 6 10V2Z"
+          fill="currentColor"
+          className="fg"
+        />
+        <path
+          d="M6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0ZM6 1C8.76142 1 11 3.23858 11 6C11 8.76142 8.76142 11 6 11C3.23858 11 1 8.76142 1 6C1 3.23858 3.23858 1 6 1Z"
           fillRule="evenodd"
-          d="M6 0a6 6 0 1 0 0 12A6 6 0 0 0 6 0m0 1a5 5 0 1 1 0 10A5 5 0 0 1 6 1"
           clipRule="evenodd"
           fill="currentColor"
           className="bg"
@@ -35,13 +39,13 @@ const variants = {
     body: (
       <>
         <path
-          d="M8 2.25a5.75 5.75 0 1 0 0 11.5z"
+          d="M8 2.25C4.82436 2.25 2.25 4.82436 2.25 8C2.25 11.1756 4.82436 13.75 8 13.75V2.25Z"
           fill="currentColor"
           className="fg"
         />
         <path
+          d="M8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0ZM8 1.25C11.7279 1.25 14.75 4.27208 14.75 8C14.75 11.7279 11.7279 14.75 8 14.75C4.27208 14.75 1.25 11.7279 1.25 8C1.25 4.27208 4.27208 1.25 8 1.25Z"
           fillRule="evenodd"
-          d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m0 1.25a6.75 6.75 0 1 1 0 13.5 6.75 6.75 0 0 1 0-13.5"
           clipRule="evenodd"
           fill="currentColor"
           className="bg"
@@ -53,10 +57,14 @@ const variants = {
     viewBox: '0 0 24 24',
     body: (
       <>
-        <path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" className="fg" />
         <path
+          d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21V3Z"
+          fill="currentColor"
+          className="fg"
+        />
+        <path
+          d="M12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0ZM12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2Z"
           fillRule="evenodd"
-          d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2"
           clipRule="evenodd"
           fill="currentColor"
           className="bg"

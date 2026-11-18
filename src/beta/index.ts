@@ -106,6 +106,7 @@ export {
   IconArrowUpRightFill,
   type IconArrowUpRightFillProps,
 } from './IconArrowUpRightFill.js';
+export { IconArrows, type IconArrowsProps } from './IconArrows.js';
 export {
   IconArrowsClockwise,
   type IconArrowsClockwiseProps,
@@ -115,14 +116,6 @@ export {
   type IconArrowsClockwiseFillProps,
 } from './IconArrowsClockwiseFill.js';
 export {
-  IconArrowsCollapse,
-  type IconArrowsCollapseProps,
-} from './IconArrowsCollapse.js';
-export {
-  IconArrowsCollapseFill,
-  type IconArrowsCollapseFillProps,
-} from './IconArrowsCollapseFill.js';
-export {
   IconArrowsContract,
   type IconArrowsContractProps,
 } from './IconArrowsContract.js';
@@ -130,14 +123,23 @@ export {
   IconArrowsContractFill,
   type IconArrowsContractFillProps,
 } from './IconArrowsContractFill.js';
+export { IconArrowsFill, type IconArrowsFillProps } from './IconArrowsFill.js';
 export {
-  IconArrowsExpand,
-  type IconArrowsExpandProps,
-} from './IconArrowsExpand.js';
+  IconArrowsRowCollapse,
+  type IconArrowsRowCollapseProps,
+} from './IconArrowsRowCollapse.js';
 export {
-  IconArrowsExpandFill,
-  type IconArrowsExpandFillProps,
-} from './IconArrowsExpandFill.js';
+  IconArrowsRowCollapseFill,
+  type IconArrowsRowCollapseFillProps,
+} from './IconArrowsRowCollapseFill.js';
+export {
+  IconArrowsRowExpand,
+  type IconArrowsRowExpandProps,
+} from './IconArrowsRowExpand.js';
+export {
+  IconArrowsRowExpandFill,
+  type IconArrowsRowExpandFillProps,
+} from './IconArrowsRowExpandFill.js';
 export { IconBarChart, type IconBarChartProps } from './IconBarChart.js';
 export { IconBarChart2, type IconBarChart2Props } from './IconBarChart2.js';
 export {
@@ -261,8 +263,41 @@ export {
   IconCircleCheckFill,
   type IconCircleCheckFillProps,
 } from './IconCircleCheckFill.js';
+export {
+  IconCircleClock,
+  type IconCircleClockProps,
+} from './IconCircleClock.js';
+export {
+  IconCircleClockDuo,
+  type IconCircleClockDuoProps,
+} from './IconCircleClockDuo.js';
+export {
+  IconCircleClockFill,
+  type IconCircleClockFillProps,
+} from './IconCircleClockFill.js';
 export { IconCircleDash, type IconCircleDashProps } from './IconCircleDash.js';
+export {
+  IconCircleEllipsis,
+  type IconCircleEllipsisProps,
+} from './IconCircleEllipsis.js';
+export {
+  IconCircleEllipsisDuo,
+  type IconCircleEllipsisDuoProps,
+} from './IconCircleEllipsisDuo.js';
+export {
+  IconCircleEllipsisFill,
+  type IconCircleEllipsisFillProps,
+} from './IconCircleEllipsisFill.js';
 export { IconCircleFill, type IconCircleFillProps } from './IconCircleFill.js';
+export { IconCircleInfo, type IconCircleInfoProps } from './IconCircleInfo.js';
+export {
+  IconCircleInfoDuo,
+  type IconCircleInfoDuoProps,
+} from './IconCircleInfoDuo.js';
+export {
+  IconCircleInfoFill,
+  type IconCircleInfoFillProps,
+} from './IconCircleInfoFill.js';
 export {
   IconCircleMinus,
   type IconCircleMinusProps,
@@ -284,6 +319,18 @@ export {
   IconCirclePlusFill,
   type IconCirclePlusFillProps,
 } from './IconCirclePlusFill.js';
+export {
+  IconCircleQuestion,
+  type IconCircleQuestionProps,
+} from './IconCircleQuestion.js';
+export {
+  IconCircleQuestionDuo,
+  type IconCircleQuestionDuoProps,
+} from './IconCircleQuestionDuo.js';
+export {
+  IconCircleQuestionFill,
+  type IconCircleQuestionFillProps,
+} from './IconCircleQuestionFill.js';
 export {
   IconCircleSlash,
   type IconCircleSlashProps,
@@ -398,6 +445,15 @@ export {
   type IconEyeSlashFillProps,
 } from './IconEyeSlashFill.js';
 export { IconFile, type IconFileProps } from './IconFile.js';
+export { IconFileAdded, type IconFileAddedProps } from './IconFileAdded.js';
+export {
+  IconFileAddedDuo,
+  type IconFileAddedDuoProps,
+} from './IconFileAddedDuo.js';
+export {
+  IconFileAddedFill,
+  type IconFileAddedFillProps,
+} from './IconFileAddedFill.js';
 export { IconFileArrow, type IconFileArrowProps } from './IconFileArrow.js';
 export {
   IconFileArrowDuo,
@@ -524,6 +580,18 @@ export {
   IconFileCodeFill,
   type IconFileCodeFillProps,
 } from './IconFileCodeFill.js';
+export {
+  IconFileDeleted,
+  type IconFileDeletedProps,
+} from './IconFileDeleted.js';
+export {
+  IconFileDeletedDuo,
+  type IconFileDeletedDuoProps,
+} from './IconFileDeletedDuo.js';
+export {
+  IconFileDeletedFill,
+  type IconFileDeletedFillProps,
+} from './IconFileDeletedFill.js';
 export { IconFileFill, type IconFileFillProps } from './IconFileFill.js';
 export { IconFileImage, type IconFileImageProps } from './IconFileImage.js';
 export {
@@ -543,6 +611,30 @@ export {
   IconFileLockFill,
   type IconFileLockFillProps,
 } from './IconFileLockFill.js';
+export {
+  IconFileModified,
+  type IconFileModifiedProps,
+} from './IconFileModified.js';
+export {
+  IconFileModifiedDuo,
+  type IconFileModifiedDuoProps,
+} from './IconFileModifiedDuo.js';
+export {
+  IconFileModifiedFill,
+  type IconFileModifiedFillProps,
+} from './IconFileModifiedFill.js';
+export {
+  IconFileRenamed,
+  type IconFileRenamedProps,
+} from './IconFileRenamed.js';
+export {
+  IconFileRenamedDuo,
+  type IconFileRenamedDuoProps,
+} from './IconFileRenamedDuo.js';
+export {
+  IconFileRenamedFill,
+  type IconFileRenamedFillProps,
+} from './IconFileRenamedFill.js';
 export {
   IconFileRichText,
   type IconFileRichTextProps,
@@ -742,6 +834,9 @@ export {
   IconInputSelectionFill,
   type IconInputSelectionFillProps,
 } from './IconInputSelectionFill.js';
+export { IconKey, type IconKeyProps } from './IconKey.js';
+export { IconKeyDuo, type IconKeyDuoProps } from './IconKeyDuo.js';
+export { IconKeyFill, type IconKeyFillProps } from './IconKeyFill.js';
 export { IconLifeRaft, type IconLifeRaftProps } from './IconLifeRaft.js';
 export { IconLineGraph, type IconLineGraphProps } from './IconLineGraph.js';
 export {
@@ -775,7 +870,6 @@ export { IconListCheck, type IconListCheckProps } from './IconListCheck.js';
 export { IconListDash, type IconListDashProps } from './IconListDash.js';
 export { IconListNumber, type IconListNumberProps } from './IconListNumber.js';
 export { IconLock, type IconLockProps } from './IconLock.js';
-export { IconLockDuo, type IconLockDuoProps } from './IconLockDuo.js';
 export { IconLockFill, type IconLockFillProps } from './IconLockFill.js';
 export { IconLogs, type IconLogsProps } from './IconLogs.js';
 export {
@@ -867,41 +961,29 @@ export {
   type IconSquircleAddedFillProps,
 } from './IconSquircleAddedFill.js';
 export {
-  IconSquircleArrow135Dot,
-  type IconSquircleArrow135DotProps,
-} from './IconSquircleArrow135Dot.js';
+  IconSquircleArrowDotDownRight,
+  type IconSquircleArrowDotDownRightProps,
+} from './IconSquircleArrowDotDownRight.js';
 export {
-  IconSquircleArrow135DotDuo,
-  type IconSquircleArrow135DotDuoProps,
-} from './IconSquircleArrow135DotDuo.js';
+  IconSquircleArrowDotDownRightDuo,
+  type IconSquircleArrowDotDownRightDuoProps,
+} from './IconSquircleArrowDotDownRightDuo.js';
 export {
-  IconSquircleArrow135DotFill,
-  type IconSquircleArrow135DotFillProps,
-} from './IconSquircleArrow135DotFill.js';
+  IconSquircleArrowDotDownRightFill,
+  type IconSquircleArrowDotDownRightFillProps,
+} from './IconSquircleArrowDotDownRightFill.js';
 export {
-  IconSquircleArrow315Dot,
-  type IconSquircleArrow315DotProps,
-} from './IconSquircleArrow315Dot.js';
+  IconSquircleArrowDotUpLeft,
+  type IconSquircleArrowDotUpLeftProps,
+} from './IconSquircleArrowDotUpLeft.js';
 export {
-  IconSquircleArrow315DotDuo,
-  type IconSquircleArrow315DotDuoProps,
-} from './IconSquircleArrow315DotDuo.js';
+  IconSquircleArrowDotUpLeftDuo,
+  type IconSquircleArrowDotUpLeftDuoProps,
+} from './IconSquircleArrowDotUpLeftDuo.js';
 export {
-  IconSquircleArrow315DotFill,
-  type IconSquircleArrow315DotFillProps,
-} from './IconSquircleArrow315DotFill.js';
-export {
-  IconSquircleArrow45Dot,
-  type IconSquircleArrow45DotProps,
-} from './IconSquircleArrow45Dot.js';
-export {
-  IconSquircleArrow45DotDuo,
-  type IconSquircleArrow45DotDuoProps,
-} from './IconSquircleArrow45DotDuo.js';
-export {
-  IconSquircleArrow45DotFill,
-  type IconSquircleArrow45DotFillProps,
-} from './IconSquircleArrow45DotFill.js';
+  IconSquircleArrowDotUpLeftFill,
+  type IconSquircleArrowDotUpLeftFillProps,
+} from './IconSquircleArrowDotUpLeftFill.js';
 export {
   IconSquircleArrowDown,
   type IconSquircleArrowDownProps,
@@ -987,6 +1069,10 @@ export {
   type IconSquircleCodeFillProps,
 } from './IconSquircleCodeFill.js';
 export {
+  IconSquircleDash,
+  type IconSquircleDashProps,
+} from './IconSquircleDash.js';
+export {
   IconSquircleDeleted,
   type IconSquircleDeletedProps,
 } from './IconSquircleDeleted.js';
@@ -1039,18 +1125,6 @@ export {
   type IconSquircleFillProps,
 } from './IconSquircleFill.js';
 export {
-  IconSquircleInfo,
-  type IconSquircleInfoProps,
-} from './IconSquircleInfo.js';
-export {
-  IconSquircleInfoDuo,
-  type IconSquircleInfoDuoProps,
-} from './IconSquircleInfoDuo.js';
-export {
-  IconSquircleInfoFill,
-  type IconSquircleInfoFillProps,
-} from './IconSquircleInfoFill.js';
-export {
   IconSquircleMinus,
   type IconSquircleMinusProps,
 } from './IconSquircleMinus.js';
@@ -1098,18 +1172,6 @@ export {
   IconSquirclePlusFill,
   type IconSquirclePlusFillProps,
 } from './IconSquirclePlusFill.js';
-export {
-  IconSquircleQuestion,
-  type IconSquircleQuestionProps,
-} from './IconSquircleQuestion.js';
-export {
-  IconSquircleQuestionDuo,
-  type IconSquircleQuestionDuoProps,
-} from './IconSquircleQuestionDuo.js';
-export {
-  IconSquircleQuestionFill,
-  type IconSquircleQuestionFillProps,
-} from './IconSquircleQuestionFill.js';
 export {
   IconSquircleRenamed,
   type IconSquircleRenamedProps,

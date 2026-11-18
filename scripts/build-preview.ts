@@ -581,6 +581,20 @@ async function build() {
       font-size: 0.875rem;
     }
 
+    .diagnostics {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.875rem;
+    }
+
+    .diagnostics a {
+      color: var(--fg-muted);
+    }
+
+    .diagnostics a:hover {
+      color: var(--fg);
+    }
+
     .toolbar {
       display: flex;
       align-items: center;
@@ -1322,6 +1336,10 @@ async function build() {
       <h1>@pierre/icons</h1>
       <p class="count" id="count">${currentIconCount} icons</p>
     </div>
+    <nav class="diagnostics" aria-label="Export diagnostics">
+      <a href="./report.md">Export report</a>
+      <a href="./manifest.json">SVG manifest</a>
+    </nav>
   </div>
 
   <div class="toolbar">

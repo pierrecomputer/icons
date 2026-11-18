@@ -28,17 +28,16 @@ const variants = {
           fill="currentColor"
         />
         <path
-          d="M5.375 3.625a.625.625 0 1 1 1.25 0l-.107 2.894a.5.5 0 0 1-.5.481h-.036a.5.5 0 0 1-.5-.481z"
+          d="M5.375 3.625C5.375 3.27982 5.65482 3 6 3C6.34518 3 6.625 3.27982 6.625 3.625L6.51784 6.5185C6.50788 6.78726 6.28712 7 6.01818 7H5.98182C5.71288 7 5.49212 6.78726 5.48217 6.51851L5.375 3.625Z"
           className="vector-stroke fg"
           fill="currentColor"
           opacity="1"
         />
         <circle
-          cx="0.75"
-          cy="0.75"
+          cx="6"
+          cy="8.25"
           r="0.75"
           className="ellipse-525 fg"
-          transform="matrix(-1 0 0 1 6.75 7.5)"
           fill="currentColor"
           opacity="1"
         />
@@ -58,17 +57,16 @@ const variants = {
           fill="currentColor"
         />
         <path
-          d="m7.25 4.75.22 3.75a.53.53 0 0 0 1.06 0l.22-3.75a.75.75 0 0 0-1.5 0"
+          d="M7.25 4.75L7.47064 8.50086C7.48713 8.78115 7.71923 9 8 9C8.28077 9 8.51287 8.78115 8.52936 8.50086L8.75 4.75C8.75 4.33579 8.41421 4 8 4C7.58579 4 7.25 4.33579 7.25 4.75Z"
           className="vector-630-stroke fg"
           fill="currentColor"
           opacity="1"
         />
         <circle
-          cx="1"
-          cy="1"
+          cx="8"
+          cy="11"
           r="1"
           className="ellipse-525 fg"
-          transform="matrix(-1 0 0 1 9 10)"
           fill="currentColor"
           opacity="1"
         />
@@ -88,17 +86,16 @@ const variants = {
           fill="currentColor"
         />
         <path
-          d="m10.75 7.2.366 5.968a.886.886 0 0 0 1.768 0L13.25 7.2c0-.663-.56-1.2-1.25-1.2s-1.25.537-1.25 1.2"
+          d="M10.75 7.2L11.1157 13.1682C11.1443 13.6356 11.5317 14 12 14C12.4683 14 12.8557 13.6356 12.8843 13.1682L13.25 7.2C13.25 6.53726 12.6904 6 12 6C11.3096 6 10.75 6.53726 10.75 7.2Z"
           className="vector-630-stroke fg"
           fill="currentColor"
           opacity="1"
         />
         <circle
-          cx="1.5"
-          cy="1.5"
+          cx="12"
+          cy="16.5"
           r="1.5"
           className="ellipse-525 fg"
-          transform="matrix(-1 0 0 1 13.5 15)"
           fill="currentColor"
           opacity="1"
         />

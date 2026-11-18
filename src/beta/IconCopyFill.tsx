@@ -20,14 +20,14 @@ const variants = {
     body: (
       <>
         <path
-          d="M3 2a2 2 0 0 1 2-2h5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+          d="M3 2C3 0.89543 3.89543 0 5 0H10C11.1046 0 12 0.895431 12 2V7C12 8.10457 11.1046 9 10 9H5C3.89543 9 3 8.10457 3 7V2Z"
           className="rectangle-841 fg"
           fill="currentColor"
         />
         <path
-          d="M2 7a3 3 0 0 0 3 3h4a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"
-          className="subtract bg"
           opacity="0.4"
+          d="M2 7C2 8.65685 3.34315 10 5 10H9C9 11.1046 8.10457 12 7 12H2C0.895431 12 0 11.1046 0 10V5C0 3.89543 0.895431 3 2 3V7Z"
+          className="subtract bg"
           fill="currentColor"
         />
       </>
@@ -38,17 +38,17 @@ const variants = {
     body: (
       <>
         <rect
+          x="4"
           width="12"
           height="12"
-          x="4"
-          className="rectangle-841 fg"
           rx="3"
+          className="rectangle-841 fg"
           fill="currentColor"
         />
         <path
-          d="M2.75 10.25a3 3 0 0 0 3 3h6.238A3 3 0 0 1 9 16H3a3 3 0 0 1-3-3V7a3 3 0 0 1 2.75-2.99z"
-          className="subtract bg"
           opacity="0.4"
+          d="M2.75 10.25C2.75 11.9069 4.09315 13.25 5.75 13.25H11.9883C11.8612 14.7898 10.5726 16 9 16H3C1.34315 16 0 14.6569 0 13V7C0 5.42735 1.21014 4.1378 2.75 4.01074V10.25Z"
+          className="subtract bg"
           fill="currentColor"
         />
       </>
@@ -59,17 +59,17 @@ const variants = {
     body: (
       <>
         <rect
+          x="6"
           width="18"
           height="18"
-          x="6"
-          className="rectangle-841 fg"
           rx="4"
+          className="rectangle-841 fg"
           fill="currentColor"
         />
         <path
-          d="M4.5 14a5.5 5.5 0 0 0 5.5 5.5h8v.5a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V10a4 4 0 0 1 4-4h.5z"
-          className="subtract bg"
           opacity="0.4"
+          d="M4.5 14C4.5 17.0376 6.96243 19.5 10 19.5H18V20C18 22.2091 16.2091 24 14 24H4C1.79086 24 0 22.2091 0 20V10C0 7.79086 1.79086 6 4 6H4.5V14Z"
+          className="subtract bg"
           fill="currentColor"
         />
       </>

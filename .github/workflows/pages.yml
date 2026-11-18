@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - icons-next
+      - 'icons-beta-*'
   workflow_dispatch:
 
 permissions:
@@ -41,6 +42,8 @@ jobs:
           cp dist/*.html site/
           cp dist/catalog.html site/catalog/index.html
           cp dist/families.html site/families/index.html
+          cp beta/REPORT.md site/report.md
+          cp beta/svg/manifest.json site/manifest.json
           touch site/.nojekyll
 
       - name: Configure Pages

@@ -6,6 +6,8 @@ import { join } from 'path';
 
 import { buildFromManifest } from './build-icons.ts';
 import { symbolsFromManifest } from './build-sprite.ts';
+import { isWrapperGroup } from './svg-pipeline/clean.ts';
+import { normalizeConfigUrl, parseJsConfig } from './svg-pipeline/config.ts';
 import type { IconManifest } from './svg-pipeline/index.ts';
 
 const root = await mkdtemp(join(tmpdir(), 'pierre-icons-'));
@@ -133,6 +135,31 @@ afterAll(async () => {
 });
 
 describe('canonical local generation', () => {
+  test('only unwraps groups with non-rendering metadata', () => {
+    expect(isWrapperGroup([])).toBe(true);
+    expect(isWrapperGroup(['id', 'class'])).toBe(true);
+    expect(isWrapperGroup(['id', 'transform'])).toBe(false);
+    expect(isWrapperGroup(['class', 'opacity'])).toBe(false);
+  });
+
+  test('loads the canonical JavaScript SVGO config', () => {
+    const config = parseJsConfig(`
+      const plugins = [{ name: 'preset-default' }];
+      export default { multipass: true, plugins };
+    `);
+
+    expect(config.multipass).toBe(true);
+    expect(config.plugins).toEqual([{ name: 'preset-default' }]);
+    expect(
+      normalizeConfigUrl(
+        'https://github.com/pierrecomputer/icons/blob/main/svgo.config.js',
+        ''
+      )
+    ).toBe(
+      'https://raw.githubusercontent.com/pierrecomputer/icons/main/svgo.config.js'
+    );
+  });
+
   test('regenerates an individual multi-variant React component', async () => {
     expect(await buildFromManifest(svgDir, outputDir, manifest)).toBe(3);
     const source = await readFile(
