@@ -83,23 +83,25 @@ translucent background. The preview's Multi switch changes colors only.
 
 SVGs exported with `overflow="visible"` keep that behavior in generated React
 components and sprite symbols. The npm scripts do not optimize canonical SVGs a
-second time. Until the existing flat collection is migrated, `icons:build` and
-`icons:sprite` continue to support flat `svg/IconName.svg` input when no
-manifest is present.
+second time. The existing flat stable collection is frozen during the beta, so
+normal builds only regenerate `src/beta`. Use `icons:build:stable` only when
+intentionally updating the legacy stable components. `icons:sprite` continues to
+support flat `svg/IconName.svg` input while that collection remains available.
 
 ## Scripts
 
-| Command                 | Description                                 |
-| ----------------------- | ------------------------------------------- |
-| `npm run icons`         | Build components, sprite, and preview       |
-| `npm run icons:build`   | Generate stable and beta React components   |
-| `npm run icons:layers`  | Persist structural `.bg`/`.fg` SVG hooks    |
-| `npm run icons:sprite`  | Generate one SVG symbol per icon variant    |
-| `npm run icons:preview` | Generate HTML preview                       |
-| `npm run build`         | Clean dist, generate components, compile TS |
-| `npm run clean`         | Remove dist folder                          |
-| `npm run lint`          | Run ESLint                                  |
-| `npm run format`        | Run Prettier                                |
+| Command                      | Description                                 |
+| ---------------------------- | ------------------------------------------- |
+| `npm run icons`              | Build beta components and previews          |
+| `npm run icons:build`        | Generate beta React components              |
+| `npm run icons:build:stable` | Regenerate legacy stable components         |
+| `npm run icons:layers`       | Persist structural `.bg`/`.fg` SVG hooks    |
+| `npm run icons:sprite`       | Generate one SVG symbol per icon variant    |
+| `npm run icons:preview`      | Generate HTML preview                       |
+| `npm run build`              | Clean dist, generate components, compile TS |
+| `npm run clean`              | Remove dist folder                          |
+| `npm run lint`               | Run ESLint                                  |
+| `npm run format`             | Run Prettier                                |
 
 ## Icon props
 
