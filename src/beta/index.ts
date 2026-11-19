@@ -220,6 +220,37 @@ export { IconBox, type IconBoxProps } from './IconBox.js';
 export { IconBoxFill, type IconBoxFillProps } from './IconBoxFill.js';
 export { IconBranch, type IconBranchProps } from './IconBranch.js';
 export { IconBranchFill, type IconBranchFillProps } from './IconBranchFill.js';
+export {
+  IconBrandCursor,
+  type IconBrandCursorProps,
+} from './IconBrandCursor.js';
+export {
+  IconBrandDiscord,
+  type IconBrandDiscordProps,
+} from './IconBrandDiscord.js';
+export { IconBrandGit, type IconBrandGitProps } from './IconBrandGit.js';
+export {
+  IconBrandGithub,
+  type IconBrandGithubProps,
+} from './IconBrandGithub.js';
+export {
+  IconBrandGoogle,
+  type IconBrandGoogleProps,
+} from './IconBrandGoogle.js';
+export {
+  IconBrandLinear,
+  type IconBrandLinearProps,
+} from './IconBrandLinear.js';
+export {
+  IconBrandTwitter,
+  type IconBrandTwitterProps,
+} from './IconBrandTwitter.js';
+export {
+  IconBrandVsCode,
+  type IconBrandVsCodeProps,
+} from './IconBrandVsCode.js';
+export { IconBrandX, type IconBrandXProps } from './IconBrandX.js';
+export { IconBrandZed, type IconBrandZedProps } from './IconBrandZed.js';
 export { IconBuilding, type IconBuildingProps } from './IconBuilding.js';
 export {
   IconBuildingBadgePlus,
@@ -901,6 +932,7 @@ export { IconListBullet, type IconListBulletProps } from './IconListBullet.js';
 export { IconListCheck, type IconListCheckProps } from './IconListCheck.js';
 export { IconListDash, type IconListDashProps } from './IconListDash.js';
 export { IconListNumber, type IconListNumberProps } from './IconListNumber.js';
+export { IconLoader, type IconLoaderProps } from './IconLoader.js';
 export { IconLock, type IconLockProps } from './IconLock.js';
 export { IconLockFill, type IconLockFillProps } from './IconLockFill.js';
 export { IconLogs, type IconLogsProps } from './IconLogs.js';

@@ -136,6 +136,7 @@ async function loadVariantIcons(
     );
 
     for (const svgFile of files) {
+      const singleArtworkMatch = /^(\d+(?:\.\d+)?px)\.svg$/.exec(svgFile);
       const variantMatch = /^(.+?)(?:-(\d+(?:\.\d+)?px))?\.svg$/.exec(svgFile);
       if (variantMatch == null) {
         console.warn(
@@ -144,7 +145,9 @@ async function loadVariantIcons(
         continue;
       }
 
-      const [, variant, size = '16px'] = variantMatch;
+      const [, matchedVariant, matchedSize = '16px'] = variantMatch;
+      const variant = singleArtworkMatch == null ? matchedVariant : 'default';
+      const size = singleArtworkMatch?.[1] ?? matchedSize;
       try {
         const filePath = join(directoryPath, svgFile);
         const sourceSvg = await readFile(filePath, 'utf-8');

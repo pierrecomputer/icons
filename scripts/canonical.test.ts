@@ -81,11 +81,36 @@ const manifest: IconManifest = {
         },
       ],
     },
+    {
+      name: 'IconBrandCursor',
+      axes: [
+        {
+          axis: 'Size',
+          prop: 'size',
+          numeric: true,
+          values: [{ figma: '16px', prop: '16' }],
+          defaultValue: '16',
+        },
+      ],
+      variants: [
+        {
+          key: '16',
+          file: '16px.svg',
+          properties: { Size: '16px' },
+        },
+      ],
+    },
   ],
 };
 
 await mkdir(join(svgDir, 'IconFileBadgeGear'), { recursive: true });
+await mkdir(join(svgDir, 'IconBrandCursor'), { recursive: true });
 await mkdir(outputDir, { recursive: true });
+await writeFile(
+  join(svgDir, 'IconBrandCursor', '16px.svg'),
+  '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">' +
+    '<path d="M1 1h14v14H1z" fill="currentColor"/></svg>'
+);
 await writeFile(
   join(svgDir, 'IconFileBadgeGear', 'outline-12px.svg'),
   '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12">' +
@@ -161,7 +186,7 @@ describe('canonical local generation', () => {
   });
 
   test('regenerates an individual multi-variant React component', async () => {
-    expect(await buildFromManifest(svgDir, outputDir, manifest)).toBe(3);
+    expect(await buildFromManifest(svgDir, outputDir, manifest)).toBe(4);
     const source = await readFile(
       join(outputDir, 'IconFileBadgeGear.tsx'),
       'utf-8'
@@ -199,9 +224,21 @@ describe('canonical local generation', () => {
     ).toContain('function IconFileBadgeGear');
   });
 
+  test('scales a single artwork to any requested size', async () => {
+    const source = await readFile(
+      join(outputDir, 'IconBrandCursor.tsx'),
+      'utf-8'
+    );
+    expect(source).not.toContain('size?: 16');
+    expect(source).toContain('size = 16');
+    expect(source).toContain("const key = 'default'");
+    expect(source).toContain('width={size}');
+    expect(source).toContain('height={size}');
+  });
+
   test('generates isolated per-variant sprite symbols', async () => {
     const symbols = await symbolsFromManifest(svgDir, manifest);
-    expect(symbols).toHaveLength(7);
+    expect(symbols).toHaveLength(8);
     const outline16 = symbols.find((symbol) =>
       symbol.includes('id="file-badge-gear-outline-16"')
     );
