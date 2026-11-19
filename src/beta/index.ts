@@ -198,6 +198,14 @@ export { IconBranch, type IconBranchProps } from './IconBranch.js';
 export { IconBranchFill, type IconBranchFillProps } from './IconBranchFill.js';
 export { IconBuilding, type IconBuildingProps } from './IconBuilding.js';
 export {
+  IconBuildingBadgePlus,
+  type IconBuildingBadgePlusProps,
+} from './IconBuildingBadgePlus.js';
+export {
+  IconBuildingBadgePlusFill,
+  type IconBuildingBadgePlusFillProps,
+} from './IconBuildingBadgePlusFill.js';
+export {
   IconBuildingFill,
   type IconBuildingFillProps,
 } from './IconBuildingFill.js';
@@ -217,14 +225,6 @@ export { IconCheckCheck, type IconCheckCheckProps } from './IconCheckCheck.js';
 export { IconCheckFill, type IconCheckFillProps } from './IconCheckFill.js';
 export { IconChevron, type IconChevronProps } from './IconChevron.js';
 export {
-  IconChevronContract,
-  type IconChevronContractProps,
-} from './IconChevronContract.js';
-export {
-  IconChevronContractFill,
-  type IconChevronContractFillProps,
-} from './IconChevronContractFill.js';
-export {
   IconChevronFill,
   type IconChevronFillProps,
 } from './IconChevronFill.js';
@@ -237,6 +237,14 @@ export {
   type IconChevronFlatFillProps,
 } from './IconChevronFlatFill.js';
 export { IconChevrons, type IconChevronsProps } from './IconChevrons.js';
+export {
+  IconChevronsContract,
+  type IconChevronsContractProps,
+} from './IconChevronsContract.js';
+export {
+  IconChevronsContractFill,
+  type IconChevronsContractFillProps,
+} from './IconChevronsContractFill.js';
 export {
   IconChevronsFill,
   type IconChevronsFillProps,

@@ -14835,97 +14835,6 @@
       ]
     },
     {
-      "name": "IconChevronContract",
-      "axes": [
-        {
-          "axis": "Type",
-          "prop": "type",
-          "numeric": false,
-          "values": [
-            {
-              "figma": "Outline",
-              "prop": "outline"
-            },
-            {
-              "figma": "Fill",
-              "prop": "fill"
-            }
-          ],
-          "defaultValue": "outline"
-        },
-        {
-          "axis": "Size",
-          "prop": "size",
-          "numeric": true,
-          "values": [
-            {
-              "figma": "12px",
-              "prop": "12"
-            },
-            {
-              "figma": "16px",
-              "prop": "16"
-            },
-            {
-              "figma": "24px",
-              "prop": "24"
-            }
-          ],
-          "defaultValue": "16"
-        }
-      ],
-      "variants": [
-        {
-          "key": "outline-12",
-          "file": "outline-12px.svg",
-          "properties": {
-            "Type": "Outline",
-            "Size": "12px"
-          }
-        },
-        {
-          "key": "fill-12",
-          "file": "fill-12px.svg",
-          "properties": {
-            "Type": "Fill",
-            "Size": "12px"
-          }
-        },
-        {
-          "key": "outline-16",
-          "file": "outline-16px.svg",
-          "properties": {
-            "Type": "Outline",
-            "Size": "16px"
-          }
-        },
-        {
-          "key": "fill-16",
-          "file": "fill-16px.svg",
-          "properties": {
-            "Type": "Fill",
-            "Size": "16px"
-          }
-        },
-        {
-          "key": "outline-24",
-          "file": "outline-24px.svg",
-          "properties": {
-            "Type": "Outline",
-            "Size": "24px"
-          }
-        },
-        {
-          "key": "fill-24",
-          "file": "fill-24px.svg",
-          "properties": {
-            "Type": "Fill",
-            "Size": "24px"
-          }
-        }
-      ]
-    },
-    {
       "name": "IconArrowUpRight",
       "axes": [
         {
@@ -19365,6 +19274,188 @@
           "file": "duo-24px.svg",
           "properties": {
             "Type": "Duo",
+            "Size": "24px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBuildingBadgePlus",
+      "axes": [
+        {
+          "axis": "Type",
+          "prop": "type",
+          "numeric": false,
+          "values": [
+            {
+              "figma": "Outline",
+              "prop": "outline"
+            },
+            {
+              "figma": "Fill",
+              "prop": "fill"
+            }
+          ],
+          "defaultValue": "outline"
+        },
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "12px",
+              "prop": "12"
+            },
+            {
+              "figma": "16px",
+              "prop": "16"
+            },
+            {
+              "figma": "24px",
+              "prop": "24"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "outline-12",
+          "file": "outline-12px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "fill-12",
+          "file": "fill-12px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "outline-16",
+          "file": "outline-16px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "fill-16",
+          "file": "fill-16px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "outline-24",
+          "file": "outline-24px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "fill-24",
+          "file": "fill-24px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "24px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconChevronsContract",
+      "axes": [
+        {
+          "axis": "Type",
+          "prop": "type",
+          "numeric": false,
+          "values": [
+            {
+              "figma": "Outline",
+              "prop": "outline"
+            },
+            {
+              "figma": "Fill",
+              "prop": "fill"
+            }
+          ],
+          "defaultValue": "outline"
+        },
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "12px",
+              "prop": "12"
+            },
+            {
+              "figma": "16px",
+              "prop": "16"
+            },
+            {
+              "figma": "24px",
+              "prop": "24"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "outline-12",
+          "file": "outline-12px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "fill-12",
+          "file": "fill-12px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "outline-16",
+          "file": "outline-16px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "fill-16",
+          "file": "fill-16px.svg",
+          "properties": {
+            "Type": "Fill",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "outline-24",
+          "file": "outline-24px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "24px"
+          }
+        },
+        {
+          "key": "fill-24",
+          "file": "fill-24px.svg",
+          "properties": {
+            "Type": "Fill",
             "Size": "24px"
           }
         }
