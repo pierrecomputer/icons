@@ -85,6 +85,30 @@ export {
   IconArrowShortUpFill,
   type IconArrowShortUpFillProps,
 } from './IconArrowShortUpFill.js';
+export {
+  IconArrowTrayDown,
+  type IconArrowTrayDownProps,
+} from './IconArrowTrayDown.js';
+export {
+  IconArrowTrayDownFill,
+  type IconArrowTrayDownFillProps,
+} from './IconArrowTrayDownFill.js';
+export {
+  IconArrowTrayIn,
+  type IconArrowTrayInProps,
+} from './IconArrowTrayIn.js';
+export {
+  IconArrowTrayInFill,
+  type IconArrowTrayInFillProps,
+} from './IconArrowTrayInFill.js';
+export {
+  IconArrowTrayOut,
+  type IconArrowTrayOutProps,
+} from './IconArrowTrayOut.js';
+export {
+  IconArrowTrayOutFill,
+  type IconArrowTrayOutFillProps,
+} from './IconArrowTrayOutFill.js';
 export { IconArrowUp, type IconArrowUpProps } from './IconArrowUp.js';
 export {
   IconArrowUpDown,
@@ -917,10 +941,14 @@ export {
   IconParagraphFill,
   type IconParagraphFillProps,
 } from './IconParagraphFill.js';
+export { IconPencil, type IconPencilProps } from './IconPencil.js';
+export { IconPencilFill, type IconPencilFillProps } from './IconPencilFill.js';
 export { IconPerson, type IconPersonProps } from './IconPerson.js';
 export { IconPersonFill, type IconPersonFillProps } from './IconPersonFill.js';
 export { IconPlus, type IconPlusProps } from './IconPlus.js';
 export { IconPlusFill, type IconPlusFillProps } from './IconPlusFill.js';
+export { IconServer, type IconServerProps } from './IconServer.js';
+export { IconServerFill, type IconServerFillProps } from './IconServerFill.js';
 export { IconShield, type IconShieldProps } from './IconShield.js';
 export { IconShieldFill, type IconShieldFillProps } from './IconShieldFill.js';
 export { IconShieldLock, type IconShieldLockProps } from './IconShieldLock.js';
