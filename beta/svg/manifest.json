@@ -19915,6 +19915,329 @@
           }
         }
       ]
+    },
+    {
+      "name": "IconLoader",
+      "axes": [
+        {
+          "axis": "Type",
+          "prop": "type",
+          "numeric": false,
+          "values": [
+            {
+              "figma": "Outline",
+              "prop": "outline"
+            }
+          ],
+          "defaultValue": "outline"
+        },
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "12px",
+              "prop": "12"
+            },
+            {
+              "figma": "16px",
+              "prop": "16"
+            },
+            {
+              "figma": "24px",
+              "prop": "24"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "outline-12",
+          "file": "outline-12px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "12px"
+          }
+        },
+        {
+          "key": "outline-16",
+          "file": "outline-16px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "16px"
+          }
+        },
+        {
+          "key": "outline-24",
+          "file": "outline-24px.svg",
+          "properties": {
+            "Type": "Outline",
+            "Size": "24px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandX",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandTwitter",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandDiscord",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandGithub",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandGoogle",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandLinear",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandGit",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandCursor",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandZed",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
+    },
+    {
+      "name": "IconBrandVsCode",
+      "axes": [
+        {
+          "axis": "Size",
+          "prop": "size",
+          "numeric": true,
+          "values": [
+            {
+              "figma": "16px",
+              "prop": "16"
+            }
+          ],
+          "defaultValue": "16"
+        }
+      ],
+      "variants": [
+        {
+          "key": "16",
+          "file": "16px.svg",
+          "properties": {
+            "Size": "16px"
+          }
+        }
+      ]
     }
   ]
 }

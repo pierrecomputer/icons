@@ -186,10 +186,12 @@ function componentSuffix(value: string): string {
 /**
  * Visual styles are separate components. Size is the only generated variant
  * prop, so `IconFoo`, `IconFooFill`, and `IconFooDuo` each switch their own
- * 12/16/24 artwork with `size`.
+ * 12/16/24 artwork with `size`. A family with one artwork has no generated
+ * size axis, allowing its SVG to scale to any `IconProps.size`.
  */
 function splitStyles(icon: ManifestIcon): ReactIconSource[] {
   const styleAxis = icon.axes.find((axis) => axis.prop === 'type');
+  const hasSingleArtwork = !styleAxis && icon.variants.length === 1;
   const source = (name: string, figmaStyle?: string): ReactIconSource => {
     const sourceVariants = icon.variants.filter(
       (variant) =>
@@ -198,6 +200,7 @@ function splitStyles(icon: ManifestIcon): ReactIconSource[] {
     );
     const axes = icon.axes
       .filter((axis) => axis.prop === 'size')
+      .filter((axis) => !(hasSingleArtwork && axis.values.length === 1))
       .map((axis) => {
         const values = axis.values.filter((value) =>
           sourceVariants.some(
