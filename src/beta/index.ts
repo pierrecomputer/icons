@@ -164,6 +164,8 @@ export {
   IconArrowsRowExpandFill,
   type IconArrowsRowExpandFillProps,
 } from './IconArrowsRowExpandFill.js';
+export { IconAt, type IconAtProps } from './IconAt.js';
+export { IconAtFill, type IconAtFillProps } from './IconAtFill.js';
 export { IconBarChart, type IconBarChartProps } from './IconBarChart.js';
 export { IconBarChart2, type IconBarChart2Props } from './IconBarChart2.js';
 export {
@@ -484,6 +486,8 @@ export { IconCommit, type IconCommitProps } from './IconCommit.js';
 export { IconCommitFill, type IconCommitFillProps } from './IconCommitFill.js';
 export { IconCopy, type IconCopyProps } from './IconCopy.js';
 export { IconCopyFill, type IconCopyFillProps } from './IconCopyFill.js';
+export { IconCursor, type IconCursorProps } from './IconCursor.js';
+export { IconCursorFill, type IconCursorFillProps } from './IconCursorFill.js';
 export { IconDelete, type IconDeleteProps } from './IconDelete.js';
 export { IconDeleteFill, type IconDeleteFillProps } from './IconDeleteFill.js';
 export { IconDiffSplit, type IconDiffSplitProps } from './IconDiffSplit.js';
@@ -979,6 +983,8 @@ export { IconPerson, type IconPersonProps } from './IconPerson.js';
 export { IconPersonFill, type IconPersonFillProps } from './IconPersonFill.js';
 export { IconPlus, type IconPlusProps } from './IconPlus.js';
 export { IconPlusFill, type IconPlusFillProps } from './IconPlusFill.js';
+export { IconRegex, type IconRegexProps } from './IconRegex.js';
+export { IconRegexFill, type IconRegexFillProps } from './IconRegexFill.js';
 export { IconServer, type IconServerProps } from './IconServer.js';
 export { IconServerFill, type IconServerFillProps } from './IconServerFill.js';
 export { IconShield, type IconShieldProps } from './IconShield.js';
@@ -1332,6 +1338,13 @@ export {
   IconTriangleFill,
   type IconTriangleFillProps,
 } from './IconTriangleFill.js';
+export { IconType, type IconTypeProps } from './IconType.js';
+export { IconTypeFill, type IconTypeFillProps } from './IconTypeFill.js';
+export { IconTypeWord, type IconTypeWordProps } from './IconTypeWord.js';
+export {
+  IconTypeWordFill,
+  type IconTypeWordFillProps,
+} from './IconTypeWordFill.js';
 export { IconUnlink, type IconUnlinkProps } from './IconUnlink.js';
 export { IconUnlinkFill, type IconUnlinkFillProps } from './IconUnlinkFill.js';
 export { IconUnlock, type IconUnlockProps } from './IconUnlock.js';
